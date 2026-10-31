@@ -1,0 +1,150 @@
+[
+  {
+    "position": 32,
+    "question": "Yun had 20 paperclips initially, but then lost 12. Marion has 1/4 more than what Yun currently has, plus 7. How many paperclips does Marion have?",
+    "reference_answer": "9",
+    "old_choice": 3,
+    "new_choice": 3,
+    "old_answer": "17",
+    "new_answer": "17",
+    "old_equations": [
+      {
+        "left": "8 + 2 + 7",
+        "right": "17",
+        "left_value": 17.0,
+        "right_value": 17.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ],
+    "new_equations": [
+      {
+        "left": "8 + 2 + 7",
+        "right": "17",
+        "left_value": 17.0,
+        "right_value": 17.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ]
+  },
+  {
+    "position": 44,
+    "question": "Three different 6th grade classes are combining for a square dancing unit.  If possible, the teachers would like each male student to partner with a female student for the unit.  The first class has 17 males and 13 females, while the second class has 14 males and 18 females, and the third class has 15 males and 17 females.  When the classes are combined, how many students will be unable to partner with a student of the opposite gender?",
+    "reference_answer": "2",
+    "old_choice": 0,
+    "new_choice": 1,
+    "old_answer": "48",
+    "new_answer": "48",
+    "old_equations": [
+      {
+        "left": "17 + 14 + 15",
+        "right": "46",
+        "left_value": 46.0,
+        "right_value": 46.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "13 + 18 + 17",
+        "right": "48",
+        "left_value": 48.0,
+        "right_value": 48.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "94 - 46",
+        "right": "48",
+        "left_value": 48.0,
+        "right_value": 48.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ],
+    "new_equations": [
+      {
+        "left": "17 + 14 + 15",
+        "right": "46",
+        "left_value": 46.0,
+        "right_value": 46.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "13 + 18 + 17",
+        "right": "48",
+        "left_value": 48.0,
+        "right_value": 48.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "46 + 48",
+        "right": "94",
+        "left_value": 94.0,
+        "right_value": 94.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "46 * 1",
+        "right": "46",
+        "left_value": 46.0,
+        "right_value": 46.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "94 - 46",
+        "right": "(48)",
+        "left_value": 48.0,
+        "right_value": 48.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ]
+  },
+  {
+    "position": 48,
+    "question": "Tom buys 20 shares of a stock that costs $3 each.  He sells 10 of those shares for $4 each.  The rest of the shares end up doubling in value.  How much profit does he make?",
+    "reference_answer": "40",
+    "old_choice": 3,
+    "new_choice": 2,
+    "old_answer": "100",
+    "new_answer": "40",
+    "old_equations": [],
+    "new_equations": []
+  },
+  {
+    "position": 52,
+    "question": "Erik's dog can run 24 miles per hour. It is chasing a rabbit that can run 15 miles per hour. The rabbit has a head start of .6 miles. How many minutes does it take for the dog to catch up to the rabbit?",
+    "reference_answer": "4",
+    "old_choice": 0,
+    "new_choice": 2,
+    "old_answer": "8",
+    "new_answer": "8",
+    "old_equations": [],
+    "new_equations": []
+  }
+]

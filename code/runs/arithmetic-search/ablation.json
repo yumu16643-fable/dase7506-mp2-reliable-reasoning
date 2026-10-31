@@ -1,0 +1,32 @@
+{
+  "selected": {
+    "name": "marginal_combined_0.1",
+    "kind": "marginal",
+    "mode": "combined",
+    "arithmetic": true,
+    "parameter": 0.1,
+    "oof_accuracy": 0.9165089379600421
+  },
+  "without_arithmetic_accuracy": 0.9123028391167193,
+  "with_arithmetic_accuracy": 0.9165089379600421,
+  "without_arithmetic_correct": 4338,
+  "with_arithmetic_correct": 4358,
+  "n": 4755,
+  "folds": [
+    {
+      "fold": 0,
+      "without_arithmetic_accuracy": 0.905993690851735
+    },
+    {
+      "fold": 1,
+      "without_arithmetic_accuracy": 0.9129337539432176
+    },
+    {
+      "fold": 2,
+      "without_arithmetic_accuracy": 0.917981072555205
+    }
+  ],
+  "seconds": 19.26337760000024,
+  "test_accessed": false,
+  "purpose": "Matched feature ablation after configuration selection; no new selection or tuning."
+}

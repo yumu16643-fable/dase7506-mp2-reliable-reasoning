@@ -1,0 +1,34 @@
+{
+  "seed": 2037,
+  "selected_fixed_before_diagnostic": {
+    "name": "marginal_combined_0.1",
+    "kind": "marginal",
+    "mode": "combined",
+    "arithmetic": true,
+    "parameter": 0.1,
+    "oof_accuracy": 0.9165089379600421
+  },
+  "original_accuracy": 0.907465825446898,
+  "selected_accuracy": 0.9184016824395373,
+  "n": 4755,
+  "folds": [
+    {
+      "fold": 0,
+      "original_accuracy": 0.9091482649842272,
+      "selected_accuracy": 0.9160883280757098
+    },
+    {
+      "fold": 1,
+      "original_accuracy": 0.9047318611987382,
+      "selected_accuracy": 0.9192429022082019
+    },
+    {
+      "fold": 2,
+      "original_accuracy": 0.9085173501577287,
+      "selected_accuracy": 0.9198738170347003
+    }
+  ],
+  "seconds": 56.73428840000997,
+  "test_accessed": false,
+  "note": "Same training bank reshuffled; diagnostic only, not a new independent dataset or configuration-selection step."
+}

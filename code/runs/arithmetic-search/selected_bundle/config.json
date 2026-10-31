@@ -1,0 +1,10 @@
+{
+  "name": "marginal_combined_0.1",
+  "member": {
+    "file": "weights.npz",
+    "mode": "combined",
+    "arithmetic": true
+  },
+  "selection": "training-only 3-fold question OOF accuracy",
+  "plan_sha256": "b1c1d48ac8cec9cbc502f05c0b996fc4277fce69233b892cd9411e8d232e9ce5"
+}

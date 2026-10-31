@@ -1,6 +1,12 @@
 # Selecting Reliable LLM Reasoning - DASE7506 MP2
 
-## GPU experiment (this branch)
+## Arithmetic consistency experiment (this branch)
+
+The current follow-up adds eighteen bounded numeric-equation features. Training-only question-level three-fold accuracy improves from 90.81% to 91.65%; a reshuffled diagnostic improves from 90.75% to 91.84%. The selected method scores 94.24% (752/798) on validation. A matched loss/regularization ablation gives 91.23% without the arithmetic features, versus 91.65% with them. No public test inputs/references are opened in this round, so these are development results, not a new leaderboard score. Main and official submission #340 remain unchanged.
+
+See [the focused four-page report](reports/arithmetic-report.pdf) and [the Chinese result summary](ARITHMETIC_OPTIMIZATION_ZH.md). Frozen checkpoint evaluation from `code/` is `python evaluate_arithmetic.py` (validation only), with assets in `runs/model_bundle_arithmetic/` totaling 14,323 bytes. CPU training uses the existing `requirements-training.txt` and `python train_arithmetic.py`; the reshuffled diagnostic and matched ablation are separate scripts. All sources/assets, logs, coverage statistics and tests are recorded and reproducible. Inference uses NumPy only and supports new banks through the official interface.
+
+## Earlier GPU experiment
 
 Actual training uses a single RTX 4060 Laptop GPU with PyTorch 2.6.0+cu118. Four architectures, two seeds and three-fold question-disjoint training-only cross-validation select a residual contextual verifier. OOF accuracy is 91.23% (original: 90.81%); validation is 92.61% (original: 92.23%). These are small development gains, not a demonstrated test improvement. The pre-recorded promotion gate is not met, so no public test evaluation or new official submission is made in this round.
 

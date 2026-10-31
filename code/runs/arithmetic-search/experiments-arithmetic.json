@@ -1,0 +1,478 @@
+{
+  "plan": {
+    "round": "bounded-arithmetic-checks",
+    "features": "18 deterministic numeric equation features appended to existing representations/statistics",
+    "model_families": {
+      "bce_context_C": [
+        0.001,
+        0.01,
+        0.1
+      ],
+      "pair_combined_C": [
+        0.001,
+        0.01,
+        0.1
+      ],
+      "marginal_combined_l2": [
+        0.01,
+        0.1,
+        1.0
+      ]
+    },
+    "selection": "three-fold question-disjoint training OOF accuracy, seed 2026; original baseline wins ties",
+    "validation": "evaluate the selected configuration once; no validation search",
+    "test": "Do not open public test inputs or references in this round",
+    "scaler": "fit within each training fold; refit on train only after model selection",
+    "parser": "bounded AST numeric evaluator with unit/unknown-expression rejection; arithmetic consistency only, not logical correctness"
+  },
+  "candidates": [
+    {
+      "name": "original",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": false,
+      "parameter": 0.01,
+      "oof_accuracy": 0.9080967402733964
+    },
+    {
+      "name": "bce_context_0.001",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "oof_accuracy": 0.9095688748685594
+    },
+    {
+      "name": "bce_context_0.01",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "oof_accuracy": 0.9106203995793901
+    },
+    {
+      "name": "bce_context_0.1",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "oof_accuracy": 0.9053627760252366
+    },
+    {
+      "name": "pair_combined_0.001",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "oof_accuracy": 0.9137749737118822
+    },
+    {
+      "name": "pair_combined_0.01",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "oof_accuracy": 0.9152471083070453
+    },
+    {
+      "name": "pair_combined_0.1",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "oof_accuracy": 0.9112513144058886
+    },
+    {
+      "name": "marginal_combined_0.01",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "oof_accuracy": 0.9123028391167193
+    },
+    {
+      "name": "marginal_combined_0.1",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "oof_accuracy": 0.9165089379600421
+    },
+    {
+      "name": "marginal_combined_1.0",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 1.0,
+      "oof_accuracy": 0.9095688748685594
+    }
+  ],
+  "selected": {
+    "name": "marginal_combined_0.1",
+    "kind": "marginal",
+    "mode": "combined",
+    "arithmetic": true,
+    "parameter": 0.1,
+    "oof_accuracy": 0.9165089379600421
+  },
+  "fold_records": [
+    {
+      "fold": 0,
+      "name": "original",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": false,
+      "parameter": 0.01,
+      "accuracy": 0.9028391167192429,
+      "seconds": 2.833517599996412,
+      "iterations": 75
+    },
+    {
+      "fold": 0,
+      "name": "bce_context_0.001",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "accuracy": 0.9053627760252366,
+      "seconds": 2.3297001000028104,
+      "iterations": 42
+    },
+    {
+      "fold": 0,
+      "name": "bce_context_0.01",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.905993690851735,
+      "seconds": 3.0904617000196595,
+      "iterations": 74
+    },
+    {
+      "fold": 0,
+      "name": "bce_context_0.1",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9022082018927445,
+      "seconds": 4.754312800010666,
+      "iterations": 141
+    },
+    {
+      "fold": 0,
+      "name": "pair_combined_0.001",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "accuracy": 0.9085173501577287,
+      "seconds": 1.055027099995641,
+      "iterations": 22
+    },
+    {
+      "fold": 0,
+      "name": "pair_combined_0.01",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9148264984227129,
+      "seconds": 1.1457346000242978,
+      "iterations": 44
+    },
+    {
+      "fold": 0,
+      "name": "pair_combined_0.1",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9072555205047319,
+      "seconds": 1.8267818000167608,
+      "iterations": 98
+    },
+    {
+      "fold": 0,
+      "name": "marginal_combined_0.01",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.910410094637224,
+      "seconds": 4.443395200010855,
+      "iterations": 80,
+      "converged": true
+    },
+    {
+      "fold": 0,
+      "name": "marginal_combined_0.1",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9116719242902208,
+      "seconds": 1.8857527000072878,
+      "iterations": 29,
+      "converged": true
+    },
+    {
+      "fold": 0,
+      "name": "marginal_combined_1.0",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 1.0,
+      "accuracy": 0.9078864353312303,
+      "seconds": 1.4183894000016153,
+      "iterations": 13,
+      "converged": true
+    },
+    {
+      "fold": 1,
+      "name": "original",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": false,
+      "parameter": 0.01,
+      "accuracy": 0.9091482649842272,
+      "seconds": 3.183539200021187,
+      "iterations": 75
+    },
+    {
+      "fold": 1,
+      "name": "bce_context_0.001",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "accuracy": 0.9066246056782334,
+      "seconds": 2.421700900013093,
+      "iterations": 43
+    },
+    {
+      "fold": 1,
+      "name": "bce_context_0.01",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9123028391167193,
+      "seconds": 3.144253699982073,
+      "iterations": 74
+    },
+    {
+      "fold": 1,
+      "name": "bce_context_0.1",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9041009463722397,
+      "seconds": 4.800307700003032,
+      "iterations": 142
+    },
+    {
+      "fold": 1,
+      "name": "pair_combined_0.001",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "accuracy": 0.9135646687697161,
+      "seconds": 0.9646298000006936,
+      "iterations": 18
+    },
+    {
+      "fold": 1,
+      "name": "pair_combined_0.01",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9148264984227129,
+      "seconds": 1.174135599983856,
+      "iterations": 43
+    },
+    {
+      "fold": 1,
+      "name": "pair_combined_0.1",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9141955835962146,
+      "seconds": 1.7688066000118852,
+      "iterations": 88
+    },
+    {
+      "fold": 1,
+      "name": "marginal_combined_0.01",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9123028391167193,
+      "seconds": 4.148712800000794,
+      "iterations": 80,
+      "converged": true
+    },
+    {
+      "fold": 1,
+      "name": "marginal_combined_0.1",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9129337539432176,
+      "seconds": 2.295265599997947,
+      "iterations": 26,
+      "converged": true
+    },
+    {
+      "fold": 1,
+      "name": "marginal_combined_1.0",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 1.0,
+      "accuracy": 0.9028391167192429,
+      "seconds": 1.234972200007178,
+      "iterations": 12,
+      "converged": true
+    },
+    {
+      "fold": 2,
+      "name": "original",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": false,
+      "parameter": 0.01,
+      "accuracy": 0.9123028391167193,
+      "seconds": 3.142655100004049,
+      "iterations": 81
+    },
+    {
+      "fold": 2,
+      "name": "bce_context_0.001",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "accuracy": 0.9167192429022082,
+      "seconds": 2.448806800006423,
+      "iterations": 43
+    },
+    {
+      "fold": 2,
+      "name": "bce_context_0.01",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9135646687697161,
+      "seconds": 3.0813228999904823,
+      "iterations": 73
+    },
+    {
+      "fold": 2,
+      "name": "bce_context_0.1",
+      "kind": "bce",
+      "mode": "context",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9097791798107255,
+      "seconds": 4.938404099986656,
+      "iterations": 144
+    },
+    {
+      "fold": 2,
+      "name": "pair_combined_0.001",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.001,
+      "accuracy": 0.9192429022082019,
+      "seconds": 1.153770999982953,
+      "iterations": 22
+    },
+    {
+      "fold": 2,
+      "name": "pair_combined_0.01",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9160883280757098,
+      "seconds": 1.2315887000004295,
+      "iterations": 44
+    },
+    {
+      "fold": 2,
+      "name": "pair_combined_0.1",
+      "kind": "pair",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9123028391167193,
+      "seconds": 1.8369768999982625,
+      "iterations": 100
+    },
+    {
+      "fold": 2,
+      "name": "marginal_combined_0.01",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.01,
+      "accuracy": 0.9141955835962146,
+      "seconds": 4.202609499974642,
+      "iterations": 77,
+      "converged": true
+    },
+    {
+      "fold": 2,
+      "name": "marginal_combined_0.1",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 0.1,
+      "accuracy": 0.9249211356466877,
+      "seconds": 1.9242775999882724,
+      "iterations": 28,
+      "converged": true
+    },
+    {
+      "fold": 2,
+      "name": "marginal_combined_1.0",
+      "kind": "marginal",
+      "mode": "combined",
+      "arithmetic": true,
+      "parameter": 1.0,
+      "accuracy": 0.917981072555205,
+      "seconds": 1.2950829999754205,
+      "iterations": 12,
+      "converged": true
+    }
+  ],
+  "oof_correct": 4358,
+  "baseline_oof_correct": 4318,
+  "oof_n": 4755,
+  "oof_fixes": 166,
+  "oof_breaks": 126,
+  "oof_bootstrap95_gain": [
+    0.0014721345951629863,
+    0.015357518401682362
+  ],
+  "validation_correct": 752,
+  "validation_n": 798,
+  "validation_accuracy": 0.9423558897243107,
+  "training_candidate_check_coverage": 0.6356992639327024,
+  "bad_rate_correct_training_candidate": 0.01630321187208249,
+  "bad_rate_wrong_training_candidate": 0.06020998500107135,
+  "total_seconds": 131.97935190002318,
+  "inference_asset_bytes": 14323,
+  "test_accessed": false,
+  "numpy_export_choices_match": true
+}

@@ -1,0 +1,682 @@
+[
+  {
+    "train_position": 14,
+    "candidate": 0,
+    "correct_final_answer": false,
+    "question": "A store decides to shut down and sell all of its inventory.  They have 2000 different items which would normally retail for $50.  They are offering an 80% discount and manage to sell 90% of the items.  They owed $15000 to their creditors.  How much money do they have left after the sale?",
+    "equations": [
+      {
+        "left": "2000 * (50 - 0.8 * 50)",
+        "right": "2000 * 30",
+        "left_value": 20000.0,
+        "right_value": 60000.0,
+        "bad": true,
+        "relative_error": 0.6666666666666666,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "2000 * 30",
+        "right": "60000",
+        "left_value": 60000.0,
+        "right_value": 60000.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "60000 - 15000",
+        "right": "(45000)",
+        "left_value": 45000.0,
+        "right_value": 45000.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ],
+    "text": "We are given:\n\n- Number of items: 2000  \n- Retail price per item: $50  \n- Discount: 80%  \n- Percentage sold: 90%  \n- Total owed to creditors: $15000\n\n---\n\n### Step 1: Calculate the total revenue from the sale\n\n$$\n\\text{Revenue} = \\text{Number of items} \\times (\\text{Retail price} - \\text{Discount}) = 2000 \\times (50 - 0.8 \\times 50) = 2000 \\times 30 = 60,000\n$$\n\n---\n\n### Step 2: Calculate the total amount owed\n\nThey owed $15,000.\n\n---\n\n### Step 3: Calculate how much money they have left\n\n$$\n\\text{Money left} = \\text{Total revenue} - \\text{Amount owed} = 60,000 - 15,000 = \\boxed{45000}\n$$\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{45000}\n$$"
+  },
+  {
+    "train_position": 37,
+    "candidate": 3,
+    "correct_final_answer": false,
+    "question": "Jamal works at a library shelving books. He has a cart full of books to put away in different sections. In the history section, he shelves 12 books. In the fiction section, he shelves 19 books. In the children\u2019s section, he shelves 8 books but finds 4 that were left in the wrong place that he adds to his cart to shelve elsewhere. He still has 16 books to shelve. How many books did he start with in the cart?",
+    "equations": [
+      {
+        "left": "12 + 19 + 8 + 4 + 16",
+        "right": "(61)",
+        "left_value": 59.0,
+        "right_value": 61.0,
+        "bad": true,
+        "relative_error": 0.03278688524590164,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "Jamal starts with a cart full of books. He shelves:\n\n- 12 books in the history section  \n- 19 books in the fiction section  \n- 8 books in the children\u2019s section, but finds 4 that were misplaced and adds them to the cart.\n\nHe still has **16 books to shelve**.\n\nSo, the total number of books he started with is:\n\n$$\n12 + 19 + 8 + 4 + 16 = \\boxed{61}\n$$\n\n#### <numeric answer> = 61"
+  },
+  {
+    "train_position": 47,
+    "candidate": 0,
+    "correct_final_answer": false,
+    "question": "After buying shirts worth $27 from a store, Dennis received 2 $10 bills and $3 in loose coins for his change. How much money did Dennis have initially?",
+    "equations": [
+      {
+        "left": "27 + 2 * 10 + 3",
+        "right": "27 + 20 + 3",
+        "left_value": 50.0,
+        "right_value": 50.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "27 + 20 + 3",
+        "right": "40",
+        "left_value": 50.0,
+        "right_value": 40.0,
+        "bad": true,
+        "relative_error": 0.2,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "Let's break down the problem step by step:\n\n- Dennis bought **$27** worth of shirts.\n- He received **2 $10 bills** and **$3 in loose coins**.\n\nTo find the **initial amount of money** Dennis had, we add the value of the shirts and the change:\n\n$$\n\\text{Initial amount} = 27 + 2 \\times 10 + 3 = 27 + 20 + 3 = 40\n$$\n\n### Final Answer:\n$$\n\\boxed{40}\n$$"
+  },
+  {
+    "train_position": 74,
+    "candidate": 0,
+    "correct_final_answer": true,
+    "question": "A 20 person classroom is filled with 40% girls. If 5 new boys join the classroom, what is the new percentage of girls in the class?",
+    "equations": [
+      {
+        "left": "20 * 0.4",
+        "right": "8",
+        "left_value": 8.0,
+        "right_value": 8.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "20 + 5",
+        "right": "25",
+        "left_value": 25.0,
+        "right_value": 25.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "((8)/(25)) * 100",
+        "right": "(32/100)",
+        "left_value": 32.0,
+        "right_value": 0.32,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "We start with a 20-person classroom, and 40% of the students are girls.  \nSo, the number of girls is:  \n$$ 20 \\times 0.4 = 8 $$\n\nAfter 5 new boys join, the total number of students becomes:  \n$$ 20 + 5 = 25 $$\n\nThe number of girls remains the same:  \n$$ 8 $$\n\nThe new percentage of girls in the class is:  \n$$ \\frac{8}{25} \\times 100 = 32\\% $$\n\n#### <numeric answer> 32"
+  },
+  {
+    "train_position": 74,
+    "candidate": 1,
+    "correct_final_answer": true,
+    "question": "A 20 person classroom is filled with 40% girls. If 5 new boys join the classroom, what is the new percentage of girls in the class?",
+    "equations": [
+      {
+        "left": "20 * 0.40",
+        "right": "8",
+        "left_value": 8.0,
+        "right_value": 8.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "20 + 5",
+        "right": "25",
+        "left_value": 25.0,
+        "right_value": 25.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "( ((8)/(25)) ) * 100",
+        "right": "(32/100)",
+        "left_value": 32.0,
+        "right_value": 0.32,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "We are given:\n\n- A 20-person classroom with **40% girls**.\n- 5 new **boys** join the classroom.\n\nWe are to find the **new percentage of girls** in the class.\n\n---\n\n### Step 1: Find the number of girls initially\n\nSince 40% of 20 people is the number of girls:\n\n$$\n\\text{Initial number of girls} = 20 \\times 0.40 = 8\n$$\n\n---\n\n### Step 2: Add the new boys\n\n5 new boys join the class, so the total number of students becomes:\n\n$$\n20 + 5 = 25\n$$\n\n---\n\n### Step 3: Calculate the new percentage of girls\n\n$$\n\\text{New percentage of girls} = \\left( \\frac{8}{25} \\right) \\times 100 = 32\\%\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{32}\n$$"
+  },
+  {
+    "train_position": 74,
+    "candidate": 2,
+    "correct_final_answer": true,
+    "question": "A 20 person classroom is filled with 40% girls. If 5 new boys join the classroom, what is the new percentage of girls in the class?",
+    "equations": [
+      {
+        "left": "((8)/(25)) * 100",
+        "right": "(32/100)",
+        "left_value": 32.0,
+        "right_value": 0.32,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "We start with the given information:\n\n- There are 20 people in the classroom.\n- 40% of them are girls.\n- So, the number of girls is:  \n  $ 20 \\times 0.40 = 8 $ girls.\n\nNow, 5 new boys join the classroom.  \nSo, the total number of people becomes:  \n$ 20 + 5 = 25 $.\n\nThe number of girls remains the same:  \n$ 8 $ girls.\n\nTo find the new percentage of girls in the class:\n\n$$\n\\frac{8}{25} \\times 100 = 32\\%\n$$\n\n### Final Answer:\n#### $ \\boxed{32} $"
+  },
+  {
+    "train_position": 74,
+    "candidate": 3,
+    "correct_final_answer": true,
+    "question": "A 20 person classroom is filled with 40% girls. If 5 new boys join the classroom, what is the new percentage of girls in the class?",
+    "equations": [
+      {
+        "left": "20 * 0.40",
+        "right": "8",
+        "left_value": 8.0,
+        "right_value": 8.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "8 + 0",
+        "right": "8",
+        "left_value": 8.0,
+        "right_value": 8.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "20 + 5",
+        "right": "25",
+        "left_value": 25.0,
+        "right_value": 25.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "( ((8)/(25)) ) * 100",
+        "right": "(32/100)",
+        "left_value": 32.0,
+        "right_value": 0.32,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "We are given:\n\n- A 20-person classroom.\n- 40% of the students are girls.\n- 5 new boys join the classroom.\n\nWe need to find the **new percentage of girls**.\n\n---\n\n### Step 1: Calculate the number of girls initially\n\n$$\n\\text{Number of girls} = 20 \\times 0.40 = 8\n$$\n\n---\n\n### Step 2: Add the 5 new boys\n\n$$\n\\text{New number of girls} = 8 + 0 = 8\n$$\n\n$$\n\\text{New total number of students} = 20 + 5 = 25\n$$\n\n---\n\n### Step 3: Calculate the new percentage of girls\n\n$$\n\\text{New percentage of girls} = \\left( \\frac{8}{25} \\right) \\times 100 = 32\\%\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{32}\n$$"
+  },
+  {
+    "train_position": 96,
+    "candidate": 3,
+    "correct_final_answer": false,
+    "question": "Annie has $120. The restaurant next door sells hamburgers for $4 each. The restaurant across the street sells milkshakes for $3 each. Annie buys 8 hamburgers and 6 milkshakes. How much money, in dollars, does she have left?",
+    "equations": [
+      {
+        "left": "32 +  18",
+        "right": "40",
+        "left_value": 50.0,
+        "right_value": 40.0,
+        "bad": true,
+        "relative_error": 0.2,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "Annie starts with $120.\n\nShe buys:\n- 8 hamburgers at $4 each: $8 \u00d7 $4 = **$32**\n- 6 milkshakes at $3 each: $6 \u00d7 $3 = **$18**\n\nTotal spent: $32 + $18 = **$40**\n\nShe has $120 - $40 = **$80** left.\n\n#### <numeric answer> 80"
+  },
+  {
+    "train_position": 100,
+    "candidate": 0,
+    "correct_final_answer": false,
+    "question": "Mitch is baking a cake and needs 3 cups of flour and two cups of sugar. He doesn't have a one cup scoop, only a 1/3 cup scoop. How many total scoops will he need?",
+    "equations": [
+      {
+        "left": "2 * 1/3",
+        "right": "6/3",
+        "left_value": 0.6666666666666666,
+        "right_value": 2.0,
+        "bad": true,
+        "relative_error": 0.6666666666666667,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "We need to find how many **total scoops** Mitch will need to measure **3 cups of flour** and **2 cups of sugar**, given that:\n\n- He can only measure **1/3 cup**.\n- He doesn't have a **1 cup** scoop.\n\n---\n\n### Step 1: Convert cups to fractions\n\n- **3 cups** = 3 \u00d7 1/3 = **3 scoops**  \n- **2 cups** = 2 \u00d7 1/3 = **6/3 = 2 scoops**\n\n---\n\n### Step 2: Add the scoops\n\n- 3 scoops (flour) + 2 scoops (sugar) = **5 scoops**\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{5}\n$$"
+  },
+  {
+    "train_position": 125,
+    "candidate": 0,
+    "correct_final_answer": true,
+    "question": "Matilda bought a smartphone for $300. Then she decided she wouldn't use it anyway and sold it for $255. What percentage of the initial cost did she lose?",
+    "equations": [
+      {
+        "left": "300 - 255",
+        "right": "45",
+        "left_value": 45.0,
+        "right_value": 45.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "( ((45)/(300)) ) * 100",
+        "right": "(15/100)",
+        "left_value": 15.0,
+        "right_value": 0.15,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "Matilda bought a smartphone for **$300**, and she sold it for **$255**.  \n\nTo find the **percentage of the initial cost she lost**, we calculate:\n\n$$\n\\text{Loss} = 300 - 255 = 45\n$$\n\n$$\n\\text{Percentage of initial cost} = \\left( \\frac{45}{300} \\right) \\times 100 = 15\\%\n$$\n\n### Final Answer:\n#### <numeric answer> 15%"
+  },
+  {
+    "train_position": 125,
+    "candidate": 1,
+    "correct_final_answer": true,
+    "question": "Matilda bought a smartphone for $300. Then she decided she wouldn't use it anyway and sold it for $255. What percentage of the initial cost did she lose?",
+    "equations": [
+      {
+        "left": "( ((45)/(300)) ) * 100",
+        "right": "(15/100)",
+        "left_value": 15.0,
+        "right_value": 0.15,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "Matilda sold the smartphone for **$255**, which is **$45 less** than its **original cost** of **$300**.\n\nTo find the **percentage of the initial cost she lost**, we calculate:\n\n$$\n\\text{Loss percentage} = \\left( \\frac{\\text{Loss amount}}{\\text{Initial cost}} \\right) \\times 100 = \\left( \\frac{45}{300} \\right) \\times 100 = 15\\%\n$$\n\n### Final Answer:\n#### <numeric answer> 15.00%"
+  },
+  {
+    "train_position": 125,
+    "candidate": 2,
+    "correct_final_answer": true,
+    "question": "Matilda bought a smartphone for $300. Then she decided she wouldn't use it anyway and sold it for $255. What percentage of the initial cost did she lose?",
+    "equations": [
+      {
+        "left": "300 - 255",
+        "right": "45",
+        "left_value": 45.0,
+        "right_value": 45.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "((45)/(300)) * 100",
+        "right": "(15/100)",
+        "left_value": 15.0,
+        "right_value": 0.15,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "Matilda bought a smartphone for **$300** and sold it for **$255**.\n\nTo find the **percentage of the initial cost she lost**, we calculate:\n\n$$\n\\text{Loss} = 300 - 255 = 45\n$$\n\n$$\n\\text{Percentage of initial cost} = \\frac{45}{300} \\times 100 = 15\\%\n$$\n\n### Final Answer:\n#### $15$"
+  },
+  {
+    "train_position": 125,
+    "candidate": 3,
+    "correct_final_answer": true,
+    "question": "Matilda bought a smartphone for $300. Then she decided she wouldn't use it anyway and sold it for $255. What percentage of the initial cost did she lose?",
+    "equations": [
+      {
+        "left": "300 -  255",
+        "right": "45",
+        "left_value": 45.0,
+        "right_value": 45.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "( ((45)/(300)) ) * 100",
+        "right": "(15/100)",
+        "left_value": 15.0,
+        "right_value": 0.15,
+        "bad": true,
+        "relative_error": 0.99,
+        "exact": false,
+        "division": true
+      }
+    ],
+    "text": "Matilda bought a smartphone for **$300** and sold it for **$255**.  \n\nTo find the **percentage of the initial cost she lost**, we use the formula:  \n$$\n\\text{Loss percentage} = \\left( \\frac{\\text{Loss amount}}{\\text{Initial cost}} \\right) \\times 100\n$$\n\n- **Loss amount** = $300 - $255 = **$45**  \n- **Initial cost** = **$300**\n\n$$\n\\text{Loss percentage} = \\left( \\frac{45}{300} \\right) \\times 100 = 15\\%\n$$\n\n### Final Answer:\n$$\n\\boxed{15}\n$$"
+  },
+  {
+    "train_position": 133,
+    "candidate": 0,
+    "correct_final_answer": false,
+    "question": "One of Robi's new year's resolutions is to start saving. He started to save $2 in January. This is followed by $4 in February and $8 in March. If he continues this saving pattern, how much will be his total savings after 6 months?",
+    "equations": [
+      {
+        "left": "2 + 4 + 8 + 16 + 32 + 64",
+        "right": "140",
+        "left_value": 126.0,
+        "right_value": 140.0,
+        "bad": true,
+        "relative_error": 0.1,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "We are told that Robi saves:\n\n- $2 in January  \n- $4 in February  \n- $8 in March  \n- $16 in April  \n- $32 in May  \n- $64 in June  \n\nThis is a geometric sequence where each term is multiplied by 2.\n\n### Total savings after 6 months:\n$$\n2 + 4 + 8 + 16 + 32 + 64 = 140\n$$\n\n### Final answer:\n$$\n\\boxed{140}\n$$"
+  },
+  {
+    "train_position": 133,
+    "candidate": 3,
+    "correct_final_answer": true,
+    "question": "One of Robi's new year's resolutions is to start saving. He started to save $2 in January. This is followed by $4 in February and $8 in March. If he continues this saving pattern, how much will be his total savings after 6 months?",
+    "equations": [
+      {
+        "left": "4",
+        "right": "2 * 2",
+        "left_value": 4.0,
+        "right_value": 4.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "8",
+        "right": "2 * 2",
+        "left_value": 8.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.5,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "16",
+        "right": "2 * 2",
+        "left_value": 16.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.75,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "32",
+        "right": "2 * 2",
+        "left_value": 32.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.875,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "64",
+        "right": "2 * 2",
+        "left_value": 64.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.9375,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "2",
+        "right": "2 * 2",
+        "left_value": 2.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.5,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "4",
+        "right": "2 * 2",
+        "left_value": 4.0,
+        "right_value": 4.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      },
+      {
+        "left": "8",
+        "right": "2 * 2",
+        "left_value": 8.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.5,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "16",
+        "right": "2 * 2",
+        "left_value": 16.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.75,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "32",
+        "right": "2 * 2",
+        "left_value": 32.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.875,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "64",
+        "right": "2 * 2",
+        "left_value": 64.0,
+        "right_value": 4.0,
+        "bad": true,
+        "relative_error": 0.9375,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "4",
+        "right": "2 +  4",
+        "left_value": 4.0,
+        "right_value": 6.0,
+        "bad": true,
+        "relative_error": 0.3333333333333333,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "8",
+        "right": "2 +  4 +  8",
+        "left_value": 8.0,
+        "right_value": 14.0,
+        "bad": true,
+        "relative_error": 0.42857142857142855,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "16",
+        "right": "2 +  4 +  8 +  16",
+        "left_value": 16.0,
+        "right_value": 30.0,
+        "bad": true,
+        "relative_error": 0.4666666666666667,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "32",
+        "right": "2 +  4 +  8 +  16 +  32",
+        "left_value": 32.0,
+        "right_value": 62.0,
+        "bad": true,
+        "relative_error": 0.4838709677419355,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "64",
+        "right": "2 +  4 +  8 +  16 +  32 +  64",
+        "left_value": 64.0,
+        "right_value": 126.0,
+        "bad": true,
+        "relative_error": 0.49206349206349204,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "2 + 4 + 8 + 16 + 32 + 64",
+        "right": "126",
+        "left_value": 126.0,
+        "right_value": 126.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ],
+    "text": "We are told that Robi starts saving in January with $2, then in February with $4, then in March with $8, and so on. This is a **geometric progression** where each month he saves:\n\n- January: $2  \n- February: $4 = $2 \u00d7 2  \n- March: $8 = $2 \u00d7 2\u00b2  \n- April: $16 = $2 \u00d7 2\u00b3  \n- May: $32 = $2 \u00d7 2\u2074  \n- June: $64 = $2 \u00d7 2\u2075  \n\nSo the pattern is:\n\n- January: $2 = $2 \u00d7 2\u2070  \n- February: $4 = $2 \u00d7 2\u00b9  \n- March: $8 = $2 \u00d7 2\u00b2  \n- April: $16 = $2 \u00d7 2\u00b3  \n- May: $32 = $2 \u00d7 2\u2074  \n- June: $64 = $2 \u00d7 2\u2075  \n\nNow, we want to find the total savings after **6 months**.\n\n### Step-by-step:\n\n- January: $2  \n- February: $4 = $2 + $4  \n- March: $8 = $2 + $4 + $8  \n- April: $16 = $2 + $4 + $8 + $16  \n- May: $32 = $2 + $4 + $8 + $16 + $32  \n- June: $64 = $2 + $4 + $8 + $16 + $32 + $64  \n\nAdding these up:\n\n$$\n2 + 4 + 8 + 16 + 32 + 64 = 126\n$$\n\n### Final Answer:\n\n$$\n\\boxed{126}\n$$"
+  },
+  {
+    "train_position": 147,
+    "candidate": 1,
+    "correct_final_answer": false,
+    "question": "Lisa has decided to replace her old cutlery. As she is going through the cupboards, she sees the spoons from when each of her 4 children were babies as well as 2 decorative spoons she created. She doesn't want to get rid of any of these so she adds them to her new set of cutlery. The new set of cutlery has 10 large spoons and 15 teaspoons. If the children each had 3 spoons when they were babies, how many spoons does Lisa now have?",
+    "equations": [
+      {
+        "left": "12 + 2 + 10 + 15",
+        "right": "(49)",
+        "left_value": 39.0,
+        "right_value": 49.0,
+        "bad": true,
+        "relative_error": 0.20408163265306123,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "Lisa has 4 children, and each had 3 spoons when they were babies. So:\n\n- **Children's spoons**: $ 4 \\times 3 = 12 $ spoons  \n- **Decorative spoons**: 2  \n- **Large spoons**: 10  \n- **Teaspoons**: 15\n\nNow, **Lisa adds** all of these to her new set of cutlery. So the total number of spoons is:\n\n$$\n12 + 2 + 10 + 15 = \\boxed{49}\n$$\n\n#### <numeric answer> 49"
+  },
+  {
+    "train_position": 147,
+    "candidate": 2,
+    "correct_final_answer": false,
+    "question": "Lisa has decided to replace her old cutlery. As she is going through the cupboards, she sees the spoons from when each of her 4 children were babies as well as 2 decorative spoons she created. She doesn't want to get rid of any of these so she adds them to her new set of cutlery. The new set of cutlery has 10 large spoons and 15 teaspoons. If the children each had 3 spoons when they were babies, how many spoons does Lisa now have?",
+    "equations": [
+      {
+        "left": "12 + 2 + 10 + 15",
+        "right": "40",
+        "left_value": 39.0,
+        "right_value": 40.0,
+        "bad": true,
+        "relative_error": 0.025,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "We are told:\n\n- Lisa has **4 children**, each with **3 spoons** when they were babies.\n- She has **2 decorative spoons**.\n- She adds all spoons to her new set.\n- The new set has **10 large spoons** and **15 teaspoons**.\n\n---\n\n### Step 1: Calculate the number of spoons from the children\n\nEach child had **3 spoons**, and there are **4 children**:\n\n$$\n3 \\text{ spoons/child} \\times 4 \\text{ children} = 12 \\text{ spoons}\n$$\n\n---\n\n### Step 2: Add the decorative spoons\n\nLisa has **2 decorative spoons**.\n\n---\n\n### Step 3: Add the large and small spoons\n\n- **10 large spoons**\n- **15 teaspoons**\n\nSo, total spoons:\n\n$$\n12 + 2 + 10 + 15 = 40\n$$\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{40}\n$$"
+  },
+  {
+    "train_position": 156,
+    "candidate": 3,
+    "correct_final_answer": false,
+    "question": "A pen and pencil have a total cost of $6. If the pen costs twice as much as the pencil, what is the cost of the pen?",
+    "equations": [
+      {
+        "left": "2 * 2",
+        "right": "(2)",
+        "left_value": 4.0,
+        "right_value": 2.0,
+        "bad": true,
+        "relative_error": 0.5,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "We are told:\n\n- The total cost of the pen and pencil is $6.\n- The pen costs **twice as much** as the pencil.\n\nLet the cost of the pencil be $ x $.\n\nThen, the cost of the pen is $ 2x $.\n\nThe total cost is:\n$$\nx + 2x = 6\n$$\n\nSolving:\n$$\n3x = 6 \\Rightarrow x = 2\n$$\n\nSo, the cost of the pen is:\n$$\n2x = 2 \\times 2 = \\boxed{2}\n$$\n\n#### <numeric answer> 2."
+  },
+  {
+    "train_position": 166,
+    "candidate": 3,
+    "correct_final_answer": true,
+    "question": "Laura is hosting a carwash. She will charge $5 for a car, $6 for a truck, and $7 for an SUV. They raised $100 in total. If they washed 5 SUVs and 5 trucks, how many cars did they wash?",
+    "equations": [
+      {
+        "left": "5 * 5 + 6 * 5 + 7 * 5",
+        "right": "100",
+        "left_value": 90.0,
+        "right_value": 100.0,
+        "bad": true,
+        "relative_error": 0.1,
+        "exact": false,
+        "division": false
+      },
+      {
+        "left": "25 + 30 + 35",
+        "right": "90",
+        "left_value": 90.0,
+        "right_value": 90.0,
+        "bad": false,
+        "relative_error": 0.0,
+        "exact": true,
+        "division": false
+      }
+    ],
+    "text": "We are given:\n\n- $5 for a car  \n- $6 for a truck  \n- $7 for an SUV  \n- Total amount raised: $100  \n- Number of SUVs: 5  \n- Number of trucks: 5  \n\nLet $x$ be the number of cars washed. Then:\n\n$$\n5 \\times 5 + 6 \\times 5 + 7 \\times 5 = 100\n$$\n\n$$\n25 + 30 + 35 = 90\n$$\n\nThis is not equal to $100, so we need to find how many cars they washed.\n\nLet $x$ be the number of cars washed. Then:\n\n$$\n5x + 6 \\times 5 + 7 \\times 5 = 100\n$$\n\n$$\n5x + 30 + 35 = 100\n$$\n\n$$\n5x + 65 = 100\n$$\n\n$$\n5x = 35\n$$\n\n$$\nx = 7\n$$\n\n### Final Answer:\n$$\n\\boxed{7}\n$$"
+  },
+  {
+    "train_position": 173,
+    "candidate": 1,
+    "correct_final_answer": true,
+    "question": "If Natasha was going 10 mph over the speed limit and it took her an hour to arrive at her destination that was 60 miles away, what was the speed limit?",
+    "equations": [
+      {
+        "left": "- 10",
+        "right": "60 - 10",
+        "left_value": -10.0,
+        "right_value": 50.0,
+        "bad": true,
+        "relative_error": 1.2,
+        "exact": false,
+        "division": false
+      }
+    ],
+    "text": "We are told that Natasha was going **10 mph over the speed limit**, and it took her **1 hour** to travel **60 miles**. Let's solve step by step:\n\n1. **Speed over the speed limit = 10 mph**, so her **actual speed** is **10 mph + speed limit**.\n2. She traveled **60 miles** in **1 hour**, so her **average speed** is:\n   $$\n   \\text{Average speed} = \\frac{60 \\text{ miles}}{1 \\text{ hour}} = 60 \\text{ mph}\n   $$\n3. Since she was going **10 mph over the speed limit**, we set up the equation:\n   $$\n   \\text{Speed limit} = \\text{Actual speed} - 10 = 60 - 10 = 50 \\text{ mph}\n   $$\n\n### Final Answer:\n$$\n\\boxed{50}\n$$"
+  }
+]

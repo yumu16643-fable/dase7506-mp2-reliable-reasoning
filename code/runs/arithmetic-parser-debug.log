@@ -1,0 +1,10 @@
+{"fold": 0, "name": "original", "kind": "bce", "mode": "context", "arithmetic": false, "parameter": 0.01, "accuracy": 0.9028391167192429, "seconds": 3.3089463000069372, "iterations": 75}
+{"fold": 0, "name": "bce_context_0.001", "kind": "bce", "mode": "context", "arithmetic": true, "parameter": 0.001, "accuracy": 0.9072555205047319, "seconds": 2.2388152000203263, "iterations": 40}
+{"fold": 0, "name": "bce_context_0.01", "kind": "bce", "mode": "context", "arithmetic": true, "parameter": 0.01, "accuracy": 0.9066246056782334, "seconds": 3.01689699999406, "iterations": 75}
+{"fold": 0, "name": "bce_context_0.1", "kind": "bce", "mode": "context", "arithmetic": true, "parameter": 0.1, "accuracy": 0.9072555205047319, "seconds": 4.5418237000121735, "iterations": 138}
+{"fold": 0, "name": "pair_combined_0.001", "kind": "pair", "mode": "combined", "arithmetic": true, "parameter": 0.001, "accuracy": 0.9116719242902208, "seconds": 1.0618848000012804, "iterations": 21}
+{"fold": 0, "name": "pair_combined_0.01", "kind": "pair", "mode": "combined", "arithmetic": true, "parameter": 0.01, "accuracy": 0.9154574132492114, "seconds": 1.2702730000019073, "iterations": 46}
+{"fold": 0, "name": "pair_combined_0.1", "kind": "pair", "mode": "combined", "arithmetic": true, "parameter": 0.1, "accuracy": 0.9116719242902208, "seconds": 1.9690295000036713, "iterations": 92}
+{"fold": 0, "name": "marginal_combined_0.01", "kind": "marginal", "mode": "combined", "arithmetic": true, "parameter": 0.01, "accuracy": 0.9129337539432176, "seconds": 4.416886199993314, "iterations": 74, "converged": true}
+{"fold": 0, "name": "marginal_combined_0.1", "kind": "marginal", "mode": "combined", "arithmetic": true, "parameter": 0.1, "accuracy": 0.9173501577287066, "seconds": 2.5746049000008497, "iterations": 29, "converged": true}
+{"fold": 0, "name": "marginal_combined_1.0", "kind": "marginal", "mode": "combined", "arithmetic": true, "parameter": 1.0, "accuracy": 0.9072555205047319, "seconds": 1.198169000010239, "iterations": 12, "converged": true}

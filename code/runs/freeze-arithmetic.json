@@ -1,0 +1,32 @@
+{
+  "frozen_at_utc": "2026-10-31T08:17:35.997406+00:00",
+  "selected": {
+    "name": "marginal_combined_0.1",
+    "kind": "marginal",
+    "mode": "combined",
+    "arithmetic": true,
+    "parameter": 0.1,
+    "oof_accuracy": 0.9165089379600421
+  },
+  "validation_correct": 752,
+  "validation_n": 798,
+  "inference_asset_bytes": 14323,
+  "test_accessed": false,
+  "sha256": {
+    "submission_arithmetic.py": "ca0ea5f57c620c04b97fd1e9a0a866890ae1c6ec99a422551a12414dd3601b86",
+    "arithmetic_features.py": "e43d3f65deb2f092d1764cc8036d07465ef14e8c41b13cb6208b4d88640b78ac",
+    "features.py": "791d61265cc46737b93931581a669325e0b54feb6ebdd3ad08df0ebb2ac359a1",
+    "train_arithmetic.py": "054a9b8d6146022d64346db82cb59302165e95b3fffd4ddcd07e4fcf349f539f",
+    "cross_validate_v2.py": "b5d476a346e14404ba15a5f4d51efc24d589464fe3f740c2264f59dadb60546b",
+    "arithmetic_plan.json": "a6412759f1485db05fcc9b8b078f6666261e649a01fe8ae6ea866217a5ac251b",
+    "runs/model_bundle_arithmetic/config.json": "3a6ae32a2bccca133178cf2fc0d0a99b11b08dd9714f432ef34df661b7c12028",
+    "runs/model_bundle_arithmetic/weights.npz": "6e40f7040c52d1b1c59f449db1162c592fb40076f1de170647feb6d85ac1ce6e"
+  },
+  "checks": [
+    "numeric expression behavioral tests",
+    "NumPy export validation choices match",
+    "renamed IDs",
+    "seven-question bank",
+    "candidate score permutation equivariance"
+  ]
+}

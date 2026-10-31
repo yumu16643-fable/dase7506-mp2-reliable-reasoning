@@ -1,0 +1,11 @@
+{
+  "split": "validation",
+  "prediction_process_seconds": 1.7048547000158578,
+  "scoring_process_seconds": 0.19107460000668652,
+  "total_wall_seconds": 1.8959459000034258,
+  "threads": 4,
+  "python": "3.12.7",
+  "processor": "Intel Core i7-13650HX",
+  "gpu_used": false,
+  "measurement": "Fresh official prediction/scoring processes with startup, imports, data hashes/loading, assets and preprocessing; OS disk cache not flushed; reference Xeon not measured."
+}

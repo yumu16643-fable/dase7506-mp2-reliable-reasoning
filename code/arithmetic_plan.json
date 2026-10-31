@@ -1,0 +1,11 @@
+{
+  "round": "bounded-arithmetic-checks",
+  "features": "18 deterministic numeric equation features appended to existing representations/statistics",
+  "model_families": {"bce_context_C":[0.001,0.01,0.1],"pair_combined_C":[0.001,0.01,0.1],"marginal_combined_l2":[0.01,0.1,1.0]},
+  "selection": "three-fold question-disjoint training OOF accuracy, seed 2026; original baseline wins ties",
+  "validation": "evaluate the selected configuration once; no validation search",
+  "robustness": "After selection, compare the winner and original in three reshuffled train-only folds (seed 2037); diagnostic only, no reselection",
+  "test": "Do not open public test inputs or references in this round",
+  "scaler": "fit within each training fold; refit on train only after model selection",
+  "parser": "bounded AST numeric evaluator with unit/unknown-expression rejection; arithmetic consistency only, not logical correctness"
+}
