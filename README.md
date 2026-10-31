@@ -1,5 +1,13 @@
 # Selecting Reliable LLM Reasoning - DASE7506 MP2
 
+## Follow-up optimization experiment (this branch)
+
+This branch records a CPU-only ranking/pooling follow-up. Validation improves from 92.23% to 94.24%, but the newly frozen method's single final test evaluation is **80.08565310492506% (374/467)**. It is a negative result, not a claimed leaderboard improvement. The existing submission [#340](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/340) and `main` branch remain unchanged.
+
+Read [the eight-page complete report](reports/optimization-report.pdf) and [the Chinese optimization summary](OPTIMIZATION_ZH.md). Reproduce the follow-up from `code/` with `python evaluate_v2.py --split test`; the matching assets are `runs/model_bundle_v2/`. Training/search are in `train_v2.py`, and the training-only three-fold diagnostic is in `cross_validate_v2.py`. All new development uses train/validation only; final test scoring occurs after the recorded freeze.
+
+The following sections describe the original submitted baseline and its original reproduction commands.
+
 Frozen model: `lr_context_0.01`. Official test accuracy: **81.37044967880085% (380/467)**. Validation: **92.23057644110276% (736/798)**. This is a completed local artifact; it does not claim that a leaderboard issue has been submitted.
 
 The method concatenates 1,024 supplied embedding features, their centered counterparts and 46 reference-free text/answer statistics. A training-standardized L2 logistic model selects the largest score among parseable candidates. No question IDs, lookup tables, cached choices, external weights, generation or reference IO are used during inference. `reports/report.pdf` is the six-page report.

@@ -1,0 +1,21 @@
+{"name": "pair_text_0.001", "validation_accuracy": 0.9047619047619048, "seconds": 0.019322199979797006, "objective": "pairwise logistic", "C": 0.001, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "pair_text_0.01", "validation_accuracy": 0.9047619047619048, "seconds": 0.01795539999147877, "objective": "pairwise logistic", "C": 0.01, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "pair_text_0.1", "validation_accuracy": 0.9035087719298246, "seconds": 0.026700599992182106, "objective": "pairwise logistic", "C": 0.1, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "pair_text_1.0", "validation_accuracy": 0.9035087719298246, "seconds": 0.03491519999806769, "objective": "pairwise logistic", "C": 1.0, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "list_uniform_text_0.001", "validation_accuracy": 0.9072681704260651, "seconds": 0.14872539998032153, "objective": "uniform", "l2": 0.001, "iterations": 84, "converged": true}
+{"name": "list_uniform_text_0.01", "validation_accuracy": 0.9110275689223057, "seconds": 0.07683849998284131, "objective": "uniform", "l2": 0.01, "iterations": 41, "converged": true}
+{"name": "list_uniform_text_0.1", "validation_accuracy": 0.9110275689223057, "seconds": 0.037747499998658895, "objective": "uniform", "l2": 0.1, "iterations": 19, "converged": true}
+{"name": "list_marginal_text_0.001", "validation_accuracy": 0.9085213032581454, "seconds": 0.22599489998538047, "objective": "marginal", "l2": 0.001, "iterations": 98, "converged": true}
+{"name": "list_marginal_text_0.01", "validation_accuracy": 0.9122807017543859, "seconds": 0.0967837999924086, "objective": "marginal", "l2": 0.01, "iterations": 42, "converged": true}
+{"name": "list_marginal_text_0.1", "validation_accuracy": 0.9097744360902256, "seconds": 0.04162970001925714, "objective": "marginal", "l2": 0.1, "iterations": 17, "converged": true}
+{"name": "pair_combined_0.001", "validation_accuracy": 0.9235588972431078, "seconds": 0.22470749999047257, "objective": "pairwise logistic", "C": 0.001, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "pair_combined_0.01", "validation_accuracy": 0.9273182957393483, "seconds": 0.49010749999433756, "objective": "pairwise logistic", "C": 0.01, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "pair_combined_0.1", "validation_accuracy": 0.9273182957393483, "seconds": 0.9151706000266131, "objective": "pairwise logistic", "C": 0.1, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "pair_combined_1.0", "validation_accuracy": 0.918546365914787, "seconds": 1.9138717999740038, "objective": "pairwise logistic", "C": 1.0, "training_informative_questions": 2114, "positive_negative_pairs": 6516}
+{"name": "list_uniform_combined_0.001", "validation_accuracy": 0.924812030075188, "seconds": 5.314387499995064, "objective": "uniform", "l2": 0.001, "iterations": 180, "converged": false}
+{"name": "list_uniform_combined_0.01", "validation_accuracy": 0.9298245614035088, "seconds": 2.993567299999995, "objective": "uniform", "l2": 0.01, "iterations": 102, "converged": true}
+{"name": "list_uniform_combined_0.1", "validation_accuracy": 0.9348370927318296, "seconds": 1.2498187999881338, "objective": "uniform", "l2": 0.1, "iterations": 42, "converged": true}
+{"name": "list_marginal_combined_0.001", "validation_accuracy": 0.9273182957393483, "seconds": 5.578661400009878, "objective": "marginal", "l2": 0.001, "iterations": 180, "converged": false}
+{"name": "list_marginal_combined_0.01", "validation_accuracy": 0.931077694235589, "seconds": 1.927043000003323, "objective": "marginal", "l2": 0.01, "iterations": 68, "converged": true}
+{"name": "list_marginal_combined_0.1", "validation_accuracy": 0.9385964912280702, "seconds": 0.8350153999926988, "objective": "marginal", "l2": 0.1, "iterations": 28, "converged": true}
+SELECTED {"model": "list_marginal_combined_0.1", "aggregation": {"kind": "logsumexp", "temperature": 0.5, "count_penalty": 1.0}, "validation_accuracy": 0.9423558897243107}

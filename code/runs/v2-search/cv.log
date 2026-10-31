@@ -1,0 +1,36 @@
+{'fold': 0, 'heldout_questions': 1585, 'baseline_accuracy': 0.9028391167192429, 'v2_accuracy': 0.9034700315457413, 'v2_optimizer_converged': True}
+{'fold': 1, 'heldout_questions': 1585, 'baseline_accuracy': 0.9091482649842272, 'v2_accuracy': 0.9154574132492114, 'v2_optimizer_converged': True}
+{'fold': 2, 'heldout_questions': 1585, 'baseline_accuracy': 0.9123028391167193, 'v2_accuracy': 0.9123028391167193, 'v2_optimizer_converged': True}
+{
+  "folds": [
+    {
+      "fold": 0,
+      "heldout_questions": 1585,
+      "baseline_accuracy": 0.9028391167192429,
+      "v2_accuracy": 0.9034700315457413,
+      "v2_optimizer_converged": true
+    },
+    {
+      "fold": 1,
+      "heldout_questions": 1585,
+      "baseline_accuracy": 0.9091482649842272,
+      "v2_accuracy": 0.9154574132492114,
+      "v2_optimizer_converged": true
+    },
+    {
+      "fold": 2,
+      "heldout_questions": 1585,
+      "baseline_accuracy": 0.9123028391167193,
+      "v2_accuracy": 0.9123028391167193,
+      "v2_optimizer_converged": true
+    }
+  ],
+  "baseline_accuracy": 0.9080967402733964,
+  "v2_accuracy": 0.910410094637224,
+  "baseline_correct": 4318,
+  "v2_correct": 4329,
+  "n": 4755,
+  "gradient_finite_difference_error": 2.006505622581176e-08,
+  "seconds": 18.060508900001878,
+  "scope": "training split only; selected configuration diagnostic, not independent confirmation after validation model selection"
+}

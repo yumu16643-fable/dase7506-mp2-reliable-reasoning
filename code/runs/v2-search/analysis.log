@@ -1,0 +1,102 @@
+{
+  "n": 798,
+  "v2_correct": 752,
+  "old_correct": 736,
+  "fixes": 29,
+  "breaks": 13,
+  "paired_bootstrap_gain95": [
+    0.005012531328320802,
+    0.03634085213032581
+  ],
+  "informative_n": 355,
+  "informative_v2_accuracy": 0.8704225352112676,
+  "informative_old_accuracy": 0.8253521126760563,
+  "top_half_accuracy": 1.0,
+  "informative_top_half_accuracy": 0.9662921348314607,
+  "groups": [
+    {
+      "distinct": 1,
+      "n": 443,
+      "old_accuracy": 1.0,
+      "v2_accuracy": 1.0
+    },
+    {
+      "distinct": 2,
+      "n": 227,
+      "old_accuracy": 0.8766519823788547,
+      "v2_accuracy": 0.920704845814978
+    },
+    {
+      "distinct": 3,
+      "n": 108,
+      "old_accuracy": 0.7314814814814815,
+      "v2_accuracy": 0.7870370370370371
+    },
+    {
+      "distinct": 4,
+      "n": 20,
+      "old_accuracy": 0.75,
+      "v2_accuracy": 0.75
+    }
+  ],
+  "confidence_kind": "softmax over unique-answer pooled scores; no held-out calibration",
+  "brier": 0.0534274222159458,
+  "ece": 0.05351828190457006,
+  "confidence_bins": [
+    {
+      "low": 0.2,
+      "high": 0.4,
+      "n": 3,
+      "accuracy": 0.6666666666666666,
+      "confidence": 0.3719065106497268
+    },
+    {
+      "low": 0.4,
+      "high": 0.6000000000000001,
+      "n": 87,
+      "accuracy": 0.735632183908046,
+      "confidence": 0.525027754791715
+    },
+    {
+      "low": 0.6000000000000001,
+      "high": 0.8,
+      "n": 101,
+      "accuracy": 0.8415841584158416,
+      "confidence": 0.6944410484205956
+    },
+    {
+      "low": 0.8,
+      "high": 1.0,
+      "n": 607,
+      "accuracy": 0.9901153212520593,
+      "confidence": 0.9758825880574045
+    }
+  ]
+}
+FIRST FAILURES
+[
+  {
+    "position": 9,
+    "question": "John takes 3 naps a week.  Each nap is 2 hours long.  In 70 days how many hours of naps does he take?",
+    "reference": "There are 70/7=<<70/7=10>>10 weeks in 70 days.\nSo he takes 10*3=<<10*3=30>>30 naps\nThat means he naps for 30*2=<<30*2=60>>60 hours\n#### 60",
+    "selected": 1,
+    "confidence": 0.5455936179721439,
+    "candidate": "John takes 3 naps a week, and each nap is 2 hours long. In 70 days, how many hours of naps does he take?\n\n1. **Number of naps per week**: 3  \n2. **Hours per nap**: 2  \n3. **Total hours per week**: $ 3 \\times 2 = 6 $ hours  \n4. **Total days**: 70  \n5. **Total hours in 70 days**: $ 6 \\times 70 = 420 $ hours\n\n### Final Answer:\n#### <numeric answer> 420"
+  },
+  {
+    "position": 31,
+    "question": "Grace baked 4 whole pumpkin pies. She sold 1 whole pumpkin pie and gave 1 whole pumpkin pie to her friend. The remaining whole pumpkin pies were each sliced into 6 pieces. Her family ate 2/3 pieces. How many pieces of pumpkin pie were left?",
+    "reference": "Grace sold and gave a total of 1 + 1 = <<1+1=2>>2 whole pumpkin pie.\nHer family was left with 4 - 2 = <<4-2=2>>2 whole pumpkin pie.\nThere were a total of 2 x 6 = <<2*6=12>>12 pieces made from the 2 whole pumpkin pie.\nHer family ate 12 x 2/3 = <<12*2/3=8>>8 pieces.\nTherefore, 12 - 8 = <<12-8=4>>4 pieces of pumpkin pie were left.\n#### 4",
+    "selected": 0,
+    "confidence": 0.5141151182947014,
+    "candidate": "Grace baked **4 whole pumpkin pies**.  \nShe sold **1 whole pumpkin pie** and gave **1 whole pumpkin pie** to her friend.  \nSo, she had **3 whole pumpkin pies** left.  \n\nEach of those pies was sliced into **6 pieces**.  \nHer family ate **$ \\frac{2}{3} $** of the total pieces.  \n\nSo, the total number of pieces is:  \n$$ 3 \\times 6 = 18 $$\n\nShe ate $ \\frac{2}{3} $ of 18:  \n$$ \\frac{2}{3} \\times 18 = 12 $$\n\nThe number of pieces left is:  \n$$ 18 - 12 = 6 $$\n\n#### <numeric answer> 6"
+  },
+  {
+    "position": 32,
+    "question": "Yun had 20 paperclips initially, but then lost 12. Marion has 1/4 more than what Yun currently has, plus 7. How many paperclips does Marion have?",
+    "reference": "Yun has 20-12= <<20-12=8>>8 paperclips.\nMarion has 8/4 + 7 = <<8/4+7=9>>9 paperclips\n#### 9",
+    "selected": 1,
+    "confidence": 0.7538904010107437,
+    "candidate": "Yun had 20 paperclips initially, then lost 12. So, he currently has:\n\n$$\n20 - 12 = 8 \\text{ paperclips}\n$$\n\nMarion has:\n\n$$\n\\frac{1}{4} \\text{ more than what Yun currently has, plus 7}\n$$\n\nSo, Marion has:\n\n$$\n8 + \\frac{1}{4} \\times 8 + 7 = 8 + 2 + 7 = 17 \\text{ paperclips}\n$$\n\n### Final Answer:\n$$\n\\boxed{17}\n$$"
+  }
+]

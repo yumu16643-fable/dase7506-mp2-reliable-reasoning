@@ -1,0 +1,11 @@
+{
+  "split": "validation",
+  "prediction_process_seconds": 1.0865355000132695,
+  "scoring_process_seconds": 0.23402810000698082,
+  "total_wall_seconds": 1.3205760000273585,
+  "threads": 4,
+  "processor": "Intel Core i7-13650HX",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.7",
+  "measurement": "Two fresh processes; startup/imports/hashes/data/assets/preprocessing/scoring included. OS disk cache not flushed."
+}

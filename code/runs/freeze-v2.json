@@ -1,0 +1,27 @@
+{
+  "frozen_at_utc": "2026-10-31T06:42:44.534927+00:00",
+  "model": "list_marginal_combined_0.1",
+  "aggregation": {
+    "kind": "logsumexp",
+    "temperature": 0.5,
+    "count_penalty": 1.0
+  },
+  "validation_correct": 752,
+  "validation_n": 798,
+  "inference_asset_bytes": 14214,
+  "sha256": {
+    "submission_v2.py": "2fc4d30ea3814b56fa95ddd66fae6689cc33561028f3c39ef19fd60c8e88ad77",
+    "features.py": "791d61265cc46737b93931581a669325e0b54feb6ebdd3ad08df0ebb2ac359a1",
+    "ranking.py": "b191d524bab80d0548b852cc4c81320c595e98b170c49952ea83cf07c02b6379",
+    "train_v2.py": "9bbbd9b3ed518d8542b9201170e305f99f44cc0580edb397e9e44fbf7f4bbdb3",
+    "runs/model_bundle_v2/config.json": "14be9411a18fc25ca4059297c507805cbfd6f53605025e1d05074f90e0201f46",
+    "runs/model_bundle_v2/list_marginal_combined_0.1.npz": "bca4c5945a71cba3d997e6349b93d1a9750157f0181e7343b7de538c6d319bee"
+  },
+  "checks": [
+    "FP32 export preserves all validation choices",
+    "seven-question bank",
+    "renamed IDs",
+    "permuted candidate scores"
+  ],
+  "test_accessed_by_v2_development": false
+}

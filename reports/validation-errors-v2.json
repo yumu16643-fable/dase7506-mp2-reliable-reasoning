@@ -1,0 +1,370 @@
+[
+  {
+    "position": 9,
+    "question": "John takes 3 naps a week.  Each nap is 2 hours long.  In 70 days how many hours of naps does he take?",
+    "reference": "There are 70/7=<<70/7=10>>10 weeks in 70 days.\nSo he takes 10*3=<<10*3=30>>30 naps\nThat means he naps for 30*2=<<30*2=60>>60 hours\n#### 60",
+    "selected": 1,
+    "confidence": 0.5455936179721439,
+    "candidate": "John takes 3 naps a week, and each nap is 2 hours long. In 70 days, how many hours of naps does he take?\n\n1. **Number of naps per week**: 3  \n2. **Hours per nap**: 2  \n3. **Total hours per week**: $ 3 \\times 2 = 6 $ hours  \n4. **Total days**: 70  \n5. **Total hours in 70 days**: $ 6 \\times 70 = 420 $ hours\n\n### Final Answer:\n#### <numeric answer> 420"
+  },
+  {
+    "position": 31,
+    "question": "Grace baked 4 whole pumpkin pies. She sold 1 whole pumpkin pie and gave 1 whole pumpkin pie to her friend. The remaining whole pumpkin pies were each sliced into 6 pieces. Her family ate 2/3 pieces. How many pieces of pumpkin pie were left?",
+    "reference": "Grace sold and gave a total of 1 + 1 = <<1+1=2>>2 whole pumpkin pie.\nHer family was left with 4 - 2 = <<4-2=2>>2 whole pumpkin pie.\nThere were a total of 2 x 6 = <<2*6=12>>12 pieces made from the 2 whole pumpkin pie.\nHer family ate 12 x 2/3 = <<12*2/3=8>>8 pieces.\nTherefore, 12 - 8 = <<12-8=4>>4 pieces of pumpkin pie were left.\n#### 4",
+    "selected": 0,
+    "confidence": 0.5141151182947014,
+    "candidate": "Grace baked **4 whole pumpkin pies**.  \nShe sold **1 whole pumpkin pie** and gave **1 whole pumpkin pie** to her friend.  \nSo, she had **3 whole pumpkin pies** left.  \n\nEach of those pies was sliced into **6 pieces**.  \nHer family ate **$ \\frac{2}{3} $** of the total pieces.  \n\nSo, the total number of pieces is:  \n$$ 3 \\times 6 = 18 $$\n\nShe ate $ \\frac{2}{3} $ of 18:  \n$$ \\frac{2}{3} \\times 18 = 12 $$\n\nThe number of pieces left is:  \n$$ 18 - 12 = 6 $$\n\n#### <numeric answer> 6"
+  },
+  {
+    "position": 32,
+    "question": "Yun had 20 paperclips initially, but then lost 12. Marion has 1/4 more than what Yun currently has, plus 7. How many paperclips does Marion have?",
+    "reference": "Yun has 20-12= <<20-12=8>>8 paperclips.\nMarion has 8/4 + 7 = <<8/4+7=9>>9 paperclips\n#### 9",
+    "selected": 1,
+    "confidence": 0.7538904010107437,
+    "candidate": "Yun had 20 paperclips initially, then lost 12. So, he currently has:\n\n$$\n20 - 12 = 8 \\text{ paperclips}\n$$\n\nMarion has:\n\n$$\n\\frac{1}{4} \\text{ more than what Yun currently has, plus 7}\n$$\n\nSo, Marion has:\n\n$$\n8 + \\frac{1}{4} \\times 8 + 7 = 8 + 2 + 7 = 17 \\text{ paperclips}\n$$\n\n### Final Answer:\n$$\n\\boxed{17}\n$$"
+  },
+  {
+    "position": 44,
+    "question": "Three different 6th grade classes are combining for a square dancing unit.  If possible, the teachers would like each male student to partner with a female student for the unit.  The first class has 17 males and 13 females, while the second class has 14 males and 18 females, and the third class has 15 males and 17 females.  When the classes are combined, how many students will be unable to partner with a student of the opposite gender?",
+    "reference": "Combining the three classes, there are 17 + 14 + 15 = <<17+14+15=46>>46 male students.\nSimilarly, there are 13 + 18 + 17 = <<13+18+17=48>>48 female students.\nThus, there are 48-46 = <<48-46=2>>2 students who cannot partner with a student of the opposite gender.\n#### 2",
+    "selected": 0,
+    "confidence": 0.5878819994344128,
+    "candidate": "We are told that each male student must partner with a female student, and we need to find how many students **cannot** partner with a student of the opposite gender when all three classes are combined.\n\n### Step 1: Total number of students\n\n- **Class 1:** 17 males + 13 females = 30 students  \n- **Class 2:** 14 males + 18 females = 32 students  \n- **Class 3:** 15 males + 17 females = 32 students  \n\n**Total students = 30 + 32 + 32 = 94 students**\n\n---\n\n### Step 2: Total number of possible pairings\n\n- Each student must pair with exactly one student of the opposite gender.  \n- So, the total number of possible pairings is the **minimum** of the total number of males and females, since we can't pair more than one person with each gender.\n\n- **Males: 17 + 14 + 15 = 46**  \n- **Females: 13 + 18 + 17 = 48**\n\nSo, the **maximum number of possible pairings** is **46** (the number of males).\n\n---\n\n### Step 3: Find how many students are unable to partner\n\nWe subtract the number of students who can partner from the total number of students:\n\n$$\n94 - 46 = 48\n$$\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{48}\n$$"
+  },
+  {
+    "position": 65,
+    "question": "A snail kite is a kind of bird that eats apple snails. On the first day, a snail kite ate 3 snails. Then it eats 2 more snails than it did the day before. How many apple snails in all did a snail kite eat for 5 days?",
+    "reference": "On the second day, the snail kite ate 3 + 2 = <<3+2=5>>5 apple snails.\nOn the third day, the snail kite ate 5 + 2 = <<5+2=7>>7 apple snails.\nOn the fourth day, the snail kite ate 7 + 2 = <<7+2=9>>9 apple snails.\nOn the fifth day, the snail kite ate 9 + 2 = <<9+2=11>>11 apple snails.\nThe snail kite ate a total of 3 + 5 + 7 + 9 + 11 = <<3+5+7+9+11=35>>35 apple snails in 5\ndays.\n#### 35",
+    "selected": 1,
+    "confidence": 0.4562515669628809,
+    "candidate": "We are told:\n\n- On **Day 1**, the snail kite eats **3** apple snails.\n- On **Day 2**, it eats **2 more** than Day 1: $3 + 2 = 5$ apple snails.\n- On **Day 3**, it eats **2 more** than Day 2: $5 + 2 = 7$ apple snails.\n- On **Day 4**, it eats **2 more** than Day 3: $7 + 2 = 9$ apple snails.\n- On **Day 5**, it eats **2 more** than Day 4: $9 + 2 = 11$ apple snails.\n\n### Total apple snails eaten:\n$$\n3 + 5 + 7 + 9 + 11 = 36\n$$\n\n### Final answer:\n$$\n\\boxed{36}\n$$"
+  },
+  {
+    "position": 97,
+    "question": "A football club has a balance of $100 million. The club then sells 2 of its players at $10 million each, and buys 4 more at $15 million each. How much money is left in the club register in millions of dollars?",
+    "reference": "The 2 players are sold for a total of 2*10 = $<<2*10=20>>20 million\nSo the club has 100 + 20 = $<<100+20=120>>120 million\nThe cost of buying 4 more players at $15 million each is 4*15 = $<<4*15=60>>60 million\nSo the club now has 120 \u2013 60 = $<<120-60=60>>60 million\n#### 60",
+    "selected": 0,
+    "confidence": 0.6035163983471934,
+    "candidate": "We start with a balance of **100 million**.\n\n1. **Sells 2 players at $10 million each**:  \n   $ 2 \\times 10 = 20 $ million.\n\n2. **Buys 4 players at $15 million each**:  \n   $ 4 \\times 15 = 60 $ million.\n\n3. **Total change in balance**:  \n   $ 20 + 60 = 80 $ million.\n\n4. **Final balance**:  \n   $ 100 - 80 = 20 $ million.\n\n#### Final answer:  \n**20**"
+  },
+  {
+    "position": 133,
+    "question": "Jason and Jeremy want to paint their wall white and agreed to split the cost of the paint. A gallon of paint costs $45 and can cover up to 400 square feet. How much will each of them contribute to the cost of the paint if their walls have a total area of 1600 square feet and will need a second coat?",
+    "reference": "They need 1600 square feet / 400 square feet/gallon = <<1600/400=4>>4 gallons of paint for their walls.\nSince they will do a second coating, then they would need 4 gallons x 2 = <<4*2=8>>8 gallons in all.\nEight gallons of paint will cost $45/gallon x 8 gallons = $<<45*8=360>>360.\nThus, Jason and Jeremy will each contribute $360/2 = $<<360/2=180>>180.\n#### 180",
+    "selected": 2,
+    "confidence": 0.5657660920324667,
+    "candidate": "We are given:\n\n- A gallon of paint costs **$45**.\n- A gallon covers **400 square feet**.\n- Jason and Jeremy want to paint a **total wall area of 1600 square feet**.\n- They will need a **second coat**.\n\n---\n\n### Step 1: Find how many gallons are needed\n\nWe need to calculate how many gallons of paint are required to cover the wall.\n\n$$\n\\text{Gallons} = \\frac{\\text{Total area}}{\\text{Coverage per gallon}} = \\frac{1600}{400} = 4 \\text{ gallons}\n$$\n\n---\n\n### Step 2: Find the cost of 4 gallons\n\n$$\n\\text{Cost} = 4 \\times 45 = 180 \\text{ dollars}\n$$\n\n---\n\n### Step 3: Determine how much each person contributes\n\nSince the total cost is **$180**, and there are 2 people:\n\n$$\n\\text{Each person's contribution} = \\frac{180}{2} = 90 \\text{ dollars}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{90}\n$$"
+  },
+  {
+    "position": 161,
+    "question": "Patricia is growing her long very long to donate it to a charity that makes wigs for cancer survivors. Her hair is 14 inches long. She needs to donate 23 inches to make a wig. She wants her hair to be 12 inches long after the donation. How much longer does she have to grow her hair?",
+    "reference": "Her hair needs to be 35 inches long when she cuts it because 23 + 12 = <<23+12=35>>35\nShe needs to grow it 21 more inches because 35 - 14 = <<35-14=21>>21\n#### 21",
+    "selected": 3,
+    "confidence": 0.49216605481488385,
+    "candidate": "We are given:\n\n- Original hair length: 14 inches  \n- Donation needed: 23 inches  \n- Desired final length after donation: 12 inches  \n\nWe need to find how much longer Patricia has to grow her hair.\n\n### Step 1: Find how much hair is needed for the donation\n$$\n23 - 14 = 9 \\text{ inches}\n$$\n\n### Step 2: Find how much hair is left after donation\n$$\n12 - 9 = 3 \\text{ inches}\n$$\n\n### Final Answer:\n$$\n\\boxed{3}\n$$"
+  },
+  {
+    "position": 171,
+    "question": "A frog pond has five frogs living in it. Some frogs laid eggs, and now there are three times as many tadpoles growing into more frogs as there are frogs. Two-thirds of the tadpoles will survive to maturity as frogs. The pond can only sustain eight frogs. How many frogs will have to find a new pond when the tadpoles grow up?",
+    "reference": "There are three times the number of tadpoles as frogs, so there are 3 * 5 = <<3*5=15>>15 tadpoles.\nTwo-thirds of the tadpoles will survive to become frogs, so 2 * 15 / 3 = <<2*15/3=10>>10 tadpoles will grow into frogs.\nWhen the tadpoles grow up, there will be 5 + 10 = <<5+10=15>>15 frogs in the pond.\nThe pond can only sustain 8 frogs, so 15 - 8 = <<15-8=7>>7 frogs will need to find a new pond.\n#### 7",
+    "selected": 2,
+    "confidence": 0.5245906946651777,
+    "candidate": "We are given the following information:\n\n- There are **5 frogs** initially.\n- **Three times as many tadpoles** as frogs are now:  \n  $ 3 \\times 5 = 15 $ tadpoles.\n- **Two-thirds of the tadpoles** will survive to maturity as frogs.\n- The **pond can only sustain 8 frogs**.\n\n---\n\n### Step 1: Calculate the number of tadpoles that will survive to maturity\n\n$$\n\\frac{2}{3} \\times 15 = 10\n$$\n\nSo, **10 tadpoles** will mature and become frogs.\n\n---\n\n### Step 2: Subtract the number of frogs that will become tadpoles from the total number of tadpoles\n\n$$\n15 - 10 = 5\n$$\n\nSo, **5 frogs** will become tadpoles.\n\n---\n\n### Step 3: Subtract the number of frogs that will become tadpoles from the total number of frogs that can stay\n\n$$\n8 - 5 = 3\n$$\n\nSo, **3 frogs** will have to find a new pond.\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{3}\n$$"
+  },
+  {
+    "position": 175,
+    "question": "Lexie is 6 years older than her brother and her sister is twice her age. If Lexie is 8, what is the age difference between her brother and her sister?",
+    "reference": "Lexie's brother is 8 - 6 = <<8-6=2>>2 years old.\nHer sister is 8 x 2 = <<8*2=16>>16 years old.\nThe age difference between her brother and sister is 16 - 2 = <<16-2=14>>14 years.\n#### 14",
+    "selected": 0,
+    "confidence": 0.8012714706828802,
+    "candidate": "We are given:\n\n- Lexie is 8 years old.\n- Lexie is 6 years older than her brother.\n- Lexie is twice the age of her sister.\n\nLet's solve step by step:\n\n1. Lexie's age = 8  \n2. Lexie is 6 years older than her brother \u2192 Brother's age = Lexie's age - 6 = $ 8 - 6 = 2 $  \n3. Lexie is twice her sister's age \u2192 Sister's age = Lexie's age / 2 = $ 8 / 2 = 4 $\n\nNow, the **age difference between her brother and her sister** is:  \n$$ 2 - 4 = -2 $$\n\nSince age differences are typically expressed as absolute values, the final answer is:\n\n$$ \\boxed{2} $$"
+  },
+  {
+    "position": 203,
+    "question": "A school library has 120 books.  Each student needs 5 books for their classes.  The library was able to help 4 students on the first day of school, 5 students on the second day and 6 students on the third day.  How many students can the library help out on the fourth day of school?",
+    "reference": "On the first day, the library used 4 students * 5 books = <<4*5=20>>20 books.\nOn the second day, the library used 5 students * 5 books = <<5*5=25>>25 books.\nOn the third day, the library used 6 students * 5 books = <<6*5=30>>30 books.\nOn the fourth day, the library had 120 books - 20 - 25 - 30 = <<120-20-25-30=45>>45 books remaining.\nThe library can help 45 books / 5 books = <<45/5=9>>9 students on the fourth day.\n#### 9",
+    "selected": 3,
+    "confidence": 0.6256904435862172,
+    "candidate": "We start with the total number of books: **120**.\n\nEach student needs **5 books**, so the **total number of students** that can be helped on the first three days is:\n\n$$\n4 + 5 + 6 = 15 \\text{ students}\n$$\n\nSince each student needs **5 books**, the total number of books used by these students is:\n\n$$\n15 \\times 5 = 75 \\text{ books}\n$$\n\nNow, the library has **120 books**, and **75 books have been used**, so the remaining books are:\n\n$$\n120 - 75 = 45 \\text{ books}\n$$\n\nThese remaining books will help the library with **the fourth day** of school.\n\n### Final Answer:\n$$\n\\boxed{45}\n$$"
+  },
+  {
+    "position": 206,
+    "question": "Isabelle gets a job so she can save enough money to go to a concert with her two brothers. Her ticket costs $20. Her brothers both get the children\u2019s discount, and each of their tickets cost $10. Her brothers have saved $5 between the two of them and Isabelle has saved $5. If her job pays $3 per week, how many weeks must she work to afford the tickets?",
+    "reference": "The tickets for both of her brothers will cost her $10 * 2 = $<<10*2=20>>20.\nTo buy tickets for all of them, it will cost Isabelle $20 + $20 = $<<20+20=40>>40.\nBetween all of them, they have saved a total of $5 + $5 = $<<5+5=10>>10.\nSince they have already saved $10, she needs to earn an additional $40 - $10 = $<<30=30>>30 to afford the tickets.\nSince she makes $3 per week, it will take her $30 / ($3/week) = <<30/(3)=10>>10 weeks to save enough money for all of the tickets.\n#### 10",
+    "selected": 1,
+    "confidence": 0.5095584203819734,
+    "candidate": "Isabelle's total savings needed is:\n\n- Her brothers' tickets: $10 each \u2192 $20  \n- Her ticket: $20  \n- Total needed: $20 + $20 + $20 = **$60**\n\nShe saves $5 from her brothers and $5 from herself \u2192 total saved: **$10**\n\nHer job pays $3 per week. To save $60, she needs:\n\n$$\n\\frac{60}{3} = \\boxed{20} \\text{ weeks}\n$$\n\n#### <numeric answer> 20"
+  },
+  {
+    "position": 210,
+    "question": "Billy and Margaret are competing with each other to see who can swim 10 laps the fastest. Billy swims his first 5 laps in 2 minutes, swims the next 3 laps in 4 minutes, swims the next lap in 1 minute, then swims his final lap. Margaret finishes swimming all of her laps in 10 minutes. Billy wins the competition by finishing his laps 30 seconds before Margaret does. In seconds, how long did it take Billy to swim his final lap?",
+    "reference": "Margaret finished all of her laps in 10 minutes * 60 seconds = <<10*60=600>>600 seconds.\nBilly\u2019s first 5 laps took 2 minutes * 60 seconds = <<2*60=120>>120 seconds.\nHis next 3 laps took 4 minutes * 60 seconds = <<4*60=240>>240 seconds.\nHis ninth lap took 1 minute * 60 seconds = <<1*60=60>>60 seconds.\nSo his first 9 laps took 120 + 240 + 60 = <<120+240+60=420>>420 seconds.\nBilly finished swimming his laps before Margaret so all of his laps took a total of 600 \u2013 30 = <<600-30=570>>570 seconds.\nThis means that it took 570 seconds in total swimming time \u2013 420 seconds in time spent swimming the first 9 laps = 150 seconds for Billy to swim his final lap.\n#### 150",
+    "selected": 3,
+    "confidence": 0.6032106501814644,
+    "candidate": "We are given the following:\n\n- Billy swims **10 laps** in **2 minutes** for the first 5 laps, **4 minutes** for the next 3 laps, and **1 minute** for the final lap.\n- Margaret swims all 10 laps in **10 minutes**.\n- Billy finishes his laps **30 seconds before** Margaret does.\n\nLet\u2019s calculate the total time Billy takes to swim all 10 laps.\n\n### Step 1: Total time for Billy\n\n- First 5 laps: 2 minutes\n- Next 3 laps: 4 minutes\n- Final lap: 1 minute\n\nTotal time for Billy = $2 + 4 + 1 = 7$ minutes\n\nConvert to seconds: $7 \\times 60 = 420$ seconds\n\n### Step 2: Time for Margaret\n\nMargaret finishes all 10 laps in **10 minutes** = $10 \\times 60 = 600$ seconds\n\n### Step 3: Difference in time\n\nBilly finishes **30 seconds before** Margaret does.\n\nSo, the difference in time is:\n\n$$\n600 - 420 = 180 \\text{ seconds}\n$$\n\nThis means Billy's final lap took **180 seconds**.\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{180}\n$$"
+  },
+  {
+    "position": 275,
+    "question": "Texas Integrated School has 15 classes and has 20 students per class.  They added five more classes, how many students will they have now?",
+    "reference": "The school has 15 x 20 = <<15*20=300>>300 students right now.\nThey have an additional 5 x 20 = <<5*20=100>>100 students after adding 5 more classes.\nTherefore, Texas Integrated School will have a total of 300+100= <<300+100=400>>400 students.\n#### 400",
+    "selected": 1,
+    "confidence": 0.7525210346956855,
+    "candidate": "We start with 15 classes, each containing 20 students:\n\n$$\n15 \\times 20 = 300 \\text{ students}\n$$\n\nThey added 5 more classes, so now there are:\n\n$$\n15 + 5 = 20 \\text{ new classes}\n$$\n\nEach class still has 20 students:\n\n$$\n20 \\times 20 = 400 \\text{ students}\n$$\n\nNow, total students:\n\n$$\n300 + 400 = \\boxed{700}\n$$\n\n#### <numeric answer> 700."
+  },
+  {
+    "position": 281,
+    "question": "Lavinia\u2019s daughter is 10 years younger than Katie\u2019s daughter. Lavinia\u2019s son is 2 times the age of Katie\u2019s daughter. If Katie\u2019s daughter is 12 years old, how many years older is Lavinia\u2019s son than Lavinia\u2019s daughter?",
+    "reference": "Lavinia\u2019s daughter is 12 - 10 = <<12-10=2>>2 years old\nLavinia\u2019s son is 12 * 2 = <<12*2=24>>24 years old\nLavinia\u2019s son is 24 - 2 = <<24-2=22>>22 years older than Lavinia\u2019s daughter.\n#### 22",
+    "selected": 3,
+    "confidence": 0.5573359113109273,
+    "candidate": "We are given:\n\n- Katie\u2019s daughter is **12 years old**.\n- Lavinia\u2019s son is **2 times** the age of Katie\u2019s daughter.\n- Lavinia\u2019s daughter is **10 years younger** than Lavinia\u2019s son.\n\n---\n\n### Step 1: Find Lavinia\u2019s son's age\n\nSince Lavinia\u2019s son is **2 times** the age of Katie\u2019s daughter:\n\n$$\n\\text{Lavinia\u2019s son} = 2 \\times 12 = 24 \\text{ years old}\n$$\n\n---\n\n### Step 2: Find Lavinia\u2019s daughter's age\n\nLavinia\u2019s daughter is **10 years younger** than Lavinia\u2019s son:\n\n$$\n\\text{Lavinia\u2019s daughter} = 24 - 10 = 14 \\text{ years old}\n$$\n\n---\n\n### Step 3: Find the difference in age between Lavinia\u2019s son and Lavinia\u2019s daughter\n\n$$\n\\text{Difference} = 24 - 14 = \\boxed{10}\n$$\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{10}\n$$"
+  },
+  {
+    "position": 309,
+    "question": "Iris has a berry farm. Her brother and sister help her to pick up the berries and sell them to the market. Iris picked 30 blueberries, her sister picked 20 cranberries, and her brother was able to pick 10 raspberries. If 1/3 of the total berries they were able to pick are rotten and the remaining 1/2 of the fresh berries need to be kept, how many berries will they be able to sell?",
+    "reference": "Iris and his brother and sister were able to pick a total of 30 + 20 + 10 = <<30+20+10=60>>60 berries.\nThe rotten berries that needed to be thrown away are (1/3) x 60 = <<(1/3)*60=20>>20.\nSo, the total number of fresh berries is 60 - 20 = <<60-20=40>>40.\nThe berries they need to keep are (1/2) x 40 = <<(1/2)*40=20>>20.\nTherefore, the total number of berries they will be able to sell is 40 - 20 = <<40-20=20>>20.\n#### 20",
+    "selected": 1,
+    "confidence": 0.4866505994682713,
+    "candidate": "We are given the following:\n\n- Iris picked **30** blueberries.\n- Her sister picked **20** cranberries.\n- Her brother picked **10** raspberries.\n\nTotal berries picked = $30 + 20 + 10 = 60$ berries.\n\n### Step 1: Determine how many are **rotten**\n\n- $ \\frac{1}{3} $ of the total are rotten:  \n  $ \\frac{1}{3} \\times 60 = 20 $ berries.\n\n### Step 2: Determine how many are **fresh** and **kept**\n\n- $ \\frac{1}{2} $ of the fresh berries need to be kept:  \n  $ \\frac{1}{2} \\times 60 = 30 $ berries.\n\n### Step 3: Determine how many are **sold**\n\n- The remaining berries (after keeping $ \\frac{1}{2} $) are sold:  \n  $ 60 - 30 = 30 $ berries.\n\n### \u2705 Final Answer:  \n$$\n\\boxed{30}\n$$"
+  },
+  {
+    "position": 312,
+    "question": "Harry uses a whole bag of chocolate chips when he makes dough for chocolate chip cookies. The dough makes three batches of cookies, and each cookie has nine chocolate chips in it. A bag of chocolate chips has 81 chips in it. How many cookies are in a batch?",
+    "reference": "There are 81 / 3= <<81/3=27>>27 chips in a batch.\nThus, there are 27 / 9 = <<27/9=3>>3 cookies in a batch.\n#### 3",
+    "selected": 0,
+    "confidence": 0.5718446271344518,
+    "candidate": "We are given:\n\n- A bag of chocolate chips has **81 chips**.\n- Each batch requires **3 batches** of cookies.\n- Each cookie has **9 chips**.\n- We are to find the number of **cookies in a batch**.\n\n---\n\n### Step 1: Find the total number of chips used in all batches\n\n- 1 batch = 3 cookies \u00d7 9 chips = 27 chips  \n- 3 batches = 27 chips \u00d7 3 = **81 chips** \u2705\n\n---\n\n### Step 2: Find the number of cookies in a batch\n\n- 81 chips \u00f7 9 chips per cookie = **9 cookies**\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{9}\n$$"
+  },
+  {
+    "position": 325,
+    "question": "John and Yasmin's dad is named Gabriel. If John has twice the number of children that her sister has and Gabriel has six grandkids, how many children does Yasmin have?",
+    "reference": "We don't know Yasmin's number of children yet, but let's represent it as Y.\nIf John has twice the number of children Yasmin has, then John has 2*Y = 2Y kids\nIf Gabriel has 6 grandkids between John's and Yasmin's children, then we can represent this as 6 = 2Y + Y\nIf we solve the latest equation then we learn that 6=3Y\nGiven that Y represents how many kids Yasmin has, then solving for Y we know that Y=6/3 or Y=2 kids\n#### 2",
+    "selected": 3,
+    "confidence": 0.584385921602493,
+    "candidate": "We are given the following:\n\n- John and Yasmin's dad is **Gabriel**.\n- John has **twice the number of children** that her sister has.\n- Gabriel has **six grandkids**.\n\nLet\u2019s define variables:\n\n- Let $ x $ be the number of children **Yasmin has**.\n- Then, **John has twice as many children as Yasmin**, so John has $ 2x $ children.\n- Since Gabriel has **six grandkids**, and assuming each grandchild corresponds to one child, Gabriel has **6 children**.\n\nSo we are told:\n\n- Gabriel has **6 children**.\n- John has **2x children**.\n- Yasmin has **x children**.\n\nNow, we are told that **John has twice the number of children that her sister has**.\n\nLet\u2019s define:\n\n- Let $ y $ be the number of children **Yasmin's sister has**.\n\nThen:\n\n- John has $ 2y $ children.\n- Yasmin has $ y $ children.\n\nWe are told that **Gabriel has six grandkids**, and we are to find the number of children **Yasmin has**, which is $ y $.\n\nSo, the final answer is:\n\n$$\n\\boxed{1}\n$$"
+  },
+  {
+    "position": 328,
+    "question": "Manny had 3 birthday cookie pies to share with his 24 classmates and his teacher, Mr. Keith.   If each of the cookie pies were cut into 10 slices and Manny, his classmates, and Mr. Keith all had 1 piece, how many slices are left?",
+    "reference": "There is a total of 3 x 10 = <<3*10=30>>30 cookie slices.\nThere are 24 + 1 + 1 = <<24+1+1=26>>26 people who ate the cookie pieces.\nThere is 30 - 26 = <<30-26=4>>4 cookie slices left.\n#### 4",
+    "selected": 0,
+    "confidence": 0.5308821578873119,
+    "candidate": "We are told:\n\n- Manny had **3 birthday cookie pies**.\n- Each pie was cut into **10 slices**.\n- Manny, his **24 classmates**, and Mr. Keith **each had 1 piece**.\n\n### Step 1: Calculate total number of slices\n- 3 pies \u00d7 10 slices per pie = **30 slices**.\n\n### Step 2: Determine how many people had 1 slice each\n- Manny + 24 classmates + Mr. Keith = **25 people**.\n\n### Step 3: Calculate total number of slices eaten\n- 25 people \u00d7 1 slice = **25 slices**.\n\n### Step 4: Calculate how many slices are left\n- Total slices = 30  \n- Slices eaten = 25  \n- Slices left = 30 - 25 = **5**\n\n### Final Answer:\n#### <numeric answer> 5"
+  },
+  {
+    "position": 330,
+    "question": "Chantal knits sweaters to sell. Each sweater takes 4 balls of yarn. Each ball of yarn costs $6. How much money will Chantal gain in all 28 sweaters if she sells each sweater for $35?",
+    "reference": "The 28 sweaters need 28 x 4 = <<28*4=112>>112 balls of yarn.\nSo, Chantal will spend 112 x $6 = $<<112*6=672>>672 in all for the balls of yarn.\nHer total earnings for selling 28 sweaters is $35 x 28 = $<<35*28=980>>980.\nTherefore, Chantal will gain $980 - $672 = $<<980-672=308>>308.\n#### 308",
+    "selected": 1,
+    "confidence": 0.41697217342390347,
+    "candidate": "Chantal sells **28 sweaters**, each requiring **4 balls of yarn**.\n\n- **Total balls of yarn used**:  \n  $ 28 \\times 4 = 112 $ balls\n\n- **Total money from yarn**:  \n  $ 112 \\times 6 = 672 $ dollars\n\n- **Total money from selling sweaters**:  \n  $ 28 \\times 35 = 980 $ dollars\n\nSo, Chantal will **gain**:\n\n$$\n\\boxed{980}\n$$"
+  },
+  {
+    "position": 331,
+    "question": "The ages of three brothers are consecutive integers with the sum of 96.  How old is the youngest brother?",
+    "reference": "Let x represent the youngest brother\nMiddle brother:x+1\nOldest brother:x+2\nTotal:x+x+1+x+2=96\n3x+3=96\n3x=93\nx=<<31=31>>31 years old\n#### 31",
+    "selected": 1,
+    "confidence": 0.7217523023344735,
+    "candidate": "We are given:\n\n- The ages of three brothers are **consecutive integers**.\n- Their **sum is 96**.\n- We need to find the **youngest brother's age**.\n\n---\n\n### Step 1: Represent the ages\n\nLet the ages be:\n\n- $ a $: the youngest brother's age\n- $ a + d $: the next brother's age\n- $ a + 2d $: the oldest brother's age\n\nTheir total sum is:\n\n$$\na + (a + d) + (a + 2d) = 96\n$$\n\nSimplify:\n\n$$\n3a + 3d = 96\n$$\n\nDivide both sides by 3:\n\n$$\na + d = 32\n$$\n\n---\n\n### Step 2: Solve for the youngest brother's age\n\nWe are given that the **sum of the three brothers' ages is 96**, and their ages are **consecutive integers**.\n\nLet the youngest be $ a $, and the middle one be $ a + d $, the oldest be $ a + 2d $.\n\nSo the **youngest brother is**:\n\n$$\n\\boxed{a}\n$$\n\nFrom the equation:\n\n$$\na + d = 32 \\Rightarrow a = 32 - d\n$$\n\nSo the **youngest brother is**:\n\n$$\n\\boxed{32 - d}\n$$\n\nBut we don\u2019t know $ d $. However, since $ d $ must be a **positive integer**, and the ages must be **positive**, we can try small integer values for $ d $.\n\nTry $ d = 1 $:\n\n- Youngest: 31\n- Middle: 32\n- Oldest: 33\n- Total: 31 + 32 + 33 ="
+  },
+  {
+    "position": 335,
+    "question": "Wade has a hot dog food truck.  He makes $2.00 in tips per customer.  On Friday he served 28 customers.  He served three times that amount of customers on Saturday.  On Sunday, he served 36 customers. How many dollars did he make in tips between the 3 days?",
+    "reference": "On Saturday, he served 3 times the amount of customers that he served on Friday, which was 28 customers so he served 3*28 = <<3*28=84>>84 customers\nHe served 28 customers on Friday, 84 on Saturday and 36 customers on Sunday for a total of 28+84+36 = <<28+84+36=148>>148 customers\nEach customer tipped him $2.00 and he had 148 customers so he made 2*148 = $<<2*148=296.00>>296.00\n#### 296",
+    "selected": 1,
+    "confidence": 0.6700991035385944,
+    "candidate": "We are given the following information:\n\n- **Tips per customer**: $2.00  \n- **Number of customers served on each day**:  \n  - Friday: 28 customers  \n  - Saturday: 3 \u00d7 28 = 84 customers  \n  - Sunday: 36 customers  \n\n### Step 1: Calculate tips for each day  \n- **Friday**: $2.00 \u00d7 28 = 56 dollars  \n- **Saturday**: $2.00 \u00d7 84 = 168 dollars  \n- **Sunday**: $2.00 \u00d7 36 = 72 dollars  \n\n### Step 2: Add tips from all three days  \n$$\n56 + 168 + 72 = 300\n$$\n\n### Final Answer:  \n$$\n\\boxed{300}\n$$"
+  },
+  {
+    "position": 338,
+    "question": "Marcus is having a water balloon party. He has 100 balloons. Each balloon holds 3 ounces of water. He can buy 50 ounces of water for $2.5 a bottle. If he walks into the store with 2 $10 bills, how much change will he have after he buys all the water he needs?",
+    "reference": "He will need 300 ounces of water because 100 x 3 = <<100*3=300>>300\nHe will need 6 bottles because 300 / 50 = <<300/50=6>>6\nThis will cost $15 because 6 x 2.5 = <<6*2.5=15>>15\nHe has $20 because 2 x 10 = <<2*10=20>>20\nHe will get $5 in change because 20 - 15 = <<20-15=5>>5\n#### 5",
+    "selected": 3,
+    "confidence": 0.423033608536989,
+    "candidate": "Marcus has 100 balloons, and each holds 3 ounces of water. So the total water needed is:\n\n$$\n100 \\times 3 = 300 \\text{ ounces}\n$$\n\nHe can buy 50 ounces of water for $2.5 per bottle, so the cost of water is:\n\n$$\n50 \\text{ ounces} \\times 2.5 = 125 \\text{ dollars}\n$$\n\nHe starts with $100 in cash, and he pays with **$200** (since he has 2 $10 bills). So the change he gets is:\n\n$$\n200 - 125 = 75 \\text{ dollars}\n$$\n\n### Final Answer:\n$$\n\\boxed{75}\n$$"
+  },
+  {
+    "position": 359,
+    "question": "There is very little car traffic on Happy Street. During the week, most cars pass it on Tuesday - 25. On Monday, 20% less than on Tuesday, and on Wednesday, 2 more cars than on Monday. On Thursday and Friday, it is about 10 cars each day. On the weekend, traffic drops to 5 cars per day. How many cars travel down Happy Street from Monday through Sunday?",
+    "reference": "On Monday there are 20/100 * 25 = <<20/100*25=5>>5 cars passing the street less than on Tuesday.\nSo on Monday, there are 25 - 5 = <<25-5=20>>20 cars on Happy Street.\nOn Wednesday, there are 20 + 2 = <<20+2=22>>22 cars on this street.\nOn Thursday and Friday, there is a total of 10 * 2 = <<10*2=20>>20 cars passing.\nOn the weekend 5 * 2 = <<5*2=10>>10 cars are passing.\nSo from Monday through Sunday, there are 20 + 25 + 22 + 20 + 10 = <<20+25+22+20+10=97>>97 cars traveling down the street.\n#### 97",
+    "selected": 1,
+    "confidence": 0.6975113137749207,
+    "candidate": "We are given the following information:\n\n- **Tuesday**: 25 cars  \n- **Monday**: 20% less than Tuesday \u2192 $ 25 \\times (1 - 0.20) = 20 $ cars  \n- **Wednesday**: 2 more cars than Monday \u2192 $ 20 + 2 = 22 $ cars  \n- **Thursday and Friday**: 10 cars each \u2192 $ 10 + 10 = 20 $ cars  \n- **Saturday and Sunday**: 5 cars each \u2192 $ 5 + 5 = 10 $ cars  \n\nNow, add them all up:\n\n$$\n20 \\, (\\text{Monday}) + 22 \\, (\\text{Wednesday}) + 10 \\, (\\text{Thursday}) + 10 \\, (\\text{Friday}) + 10 \\, (\\text{Saturday}) + 10 \\, (\\text{Sunday}) = 92\n$$\n\n### Final Answer:\n$$\n\\boxed{92}\n$$"
+  },
+  {
+    "position": 362,
+    "question": "For his birthday, Geoffrey received clothes and money. His grandmother gave him \u20ac20, his aunt \u20ac25 and his uncle \u20ac30. With what he already had, he now has \u20ac125 in his wallet. He goes to a video game store and gets 3 games that cost 35 euros each. How much does he have left after this purchase?",
+    "reference": "Let\u2019s calculate the total price of video games: 35\u20ac X 3\u20ac/game = <<35*3=105>>105\u20ac\nNow let\u2019s find out how much money Geoffrey has left by subtracting his spending from his starting amount of cash: 125\u20ac - 105\u20ac = <<125-105=20>>20\u20ac\n#### 20",
+    "selected": 2,
+    "confidence": 0.6273991760377052,
+    "candidate": "We are given the following:\n\n- Geoffrey's grandmother gave him \u20ac20  \n- His aunt gave him \u20ac25  \n- His uncle gave him \u20ac30  \n- He already had \u20ac125 in his wallet  \n- He bought 3 games, each costing 35 euros  \n\n### Step 1: Add the money he received from his grandmother, aunt, and uncle\n\n$$\n20 + 25 + 30 = 75\n$$\n\n### Step 2: Add the money he already had to the received money\n\n$$\n125 + 75 = 200\n$$\n\n### Step 3: Calculate the total cost of the games\n\n$$\n3 \\times 35 = 105\n$$\n\n### Step 4: Subtract the cost of the games from the total\n\n$$\n200 - 105 = 95\n$$\n\n### Final Answer:\n\n$$\n\\boxed{95}\n$$"
+  },
+  {
+    "position": 397,
+    "question": "Mark is buying asphalt to pave a new section of road. The road will be 2000 feet long and 20 feet wide. Each truckload of asphalt will cover 800 square feet of road. If each truckload costs $75, and there's a 20% sales tax, how much will Mark need to pay for asphalt?",
+    "reference": "First, calculate how many square feet of road Mark needs to cover by multiplying the length by the width: 2000 feet * 20 feet = <<2000*20=40000>>40,000 sq ft\nThen divide the square footage of road by the number of square feet each truckload will cover: 40,000 sq ft / 800 sq ft/truckload = <<40000/800=50>>50 truckloads\nNow multiply the number of truckloads by the cost per truckload: $75/truckload * 50 truckloads = $<<75*50=3750>>3750\nNow calculate the sales tax by multiplying $3750 by 20%: $3750 * .2 = $<<3750*.2=750>>750\nNow add the sales tax to the cost of the asphalt to find the total: $750 + $3750 = $<<750+3750=4500>>4500\n#### 4500",
+    "selected": 1,
+    "confidence": 0.6220298362429972,
+    "candidate": "We are given the following:\n\n- Length of the road: 2000 feet  \n- Width of the road: 20 feet  \n- Area covered by one truckload of asphalt: 800 square feet  \n- Cost per truckload: $75  \n- Sales tax: 20%  \n\n---\n\n### Step 1: Calculate the total area of the road\n\n$$\n\\text{Area} = \\text{Length} \\times \\text{Width} = 2000 \\, \\text{ft} \\times 20 \\, \\text{ft} = 40,000 \\, \\text{ft}^2\n$$\n\n---\n\n### Step 2: Calculate the total amount of asphalt needed\n\n$$\n\\text{Total asphalt} = \\frac{\\text{Area}}{\\text{Area per truckload}} = \\frac{40,000}{800} = 50 \\, \\text{truckloads}\n$$\n\n---\n\n### Step 3: Calculate the total cost of asphalt\n\n$$\n\\text{Total cost} = 50 \\, \\text{truckloads} \\times 75 \\, \\text{\\$/truckload} = 3,750 \\, \\text{\\$}\n$$\n\n---\n\n### Step 4: Add sales tax\n\n$$\n\\text{Sales tax} = 3,750 \\times 0.20 = 750 \\, \\text{\\$}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{3750}\n$$"
+  },
+  {
+    "position": 412,
+    "question": "Juvy has a garden that has 20 rows with 10 plants in each row. She plants parsley in the first 3 rows and rosemary in the last two rows. The rest of the rows will be planted with chives. How many chives will Juvy plant?",
+    "reference": "Juvy planted 3 + 2 = <<3+2=5>>5 rows with parsley and rosemary.\nSo, 20 - 5 = <<20-5=15>>15 rows will be planted with chives.\nTherefore, 15 x 10 = <<15*10=150>>150 chives will be planted.\n#### 150",
+    "selected": 0,
+    "confidence": 0.5613018668339087,
+    "candidate": "Juvy has a garden with:\n\n- **20 rows**\n- **10 plants in each row**\n\n### Step 1: Determine how many rows are planted with parsley and rosemary:\n- **Parsley**: 1st and 3rd rows \u2192 **2 rows**\n- **Rosemary**: Last 2 rows \u2192 **2 rows**\n\n### Step 2: Find the number of rows planted with chives:\n- Total rows = 20  \n- Rows with parsley and rosemary = 2 + 2 = **4 rows**\n\n- Remaining rows = 20 - 4 = **16 rows**\n\n### Step 3: Calculate the number of chives:\n- Each row has **10 plants**\n- 16 rows \u00d7 10 plants = **160 plants**\n\n### Final Answer:\n#### <numeric answer> 160"
+  },
+  {
+    "position": 444,
+    "question": "Andy walks 50 meters from his house to school. After school, he comes back to the house and goes to the market. If he walks 140 meters in total, how many meters is the distance between the house and the market?",
+    "reference": "He walks 50m from home to school and walks 50m again from school to house, so he walks 50m + 50m = <<50+50=100>>100 meters\nIf the total distance is 140m, the distance between the house and the market is 140m - 100m = <<140-100=40>>40 meters.\n#### 40",
+    "selected": 1,
+    "confidence": 0.9499086630295793,
+    "candidate": "We are told:\n\n- Andy walks **50 meters** from his house to school.\n- Then he **returns** to the house and goes to the **market**.\n- The **total distance** he walks is **140 meters**.\n\nLet the distance between the house and the market be $ x $ meters.\n\n- Andy walks **50 meters** to school.\n- Then he walks **x meters** back home.\n- Then he walks **x meters** to the market.\n\nSo the total distance is:\n\n$$\n50 + x + x = 50 + 2x = 140\n$$\n\nSolving for $ x $:\n\n$$\n2x = 140 - 50 = 90\n$$\n$$\nx = \\frac{90}{2} = 45\n$$\n\n### Final Answer:\n\n$$\n\\boxed{45}\n$$"
+  },
+  {
+    "position": 454,
+    "question": "A passenger train transports passengers between two stations located in two separate cities. On a particular day, the train carried 100 passengers from one station to the other one way, and on the return trip carried 60 passengers. If the train made three more round trips that day, taking the same number of people as the first trip in each trip, calculate the total number of passengers transported between both stations?",
+    "reference": "The total number of people transported in the first trip is 100 one way + 60 on the return trip = <<100+60=160>>160 people.\nIf the train made three more round trips that day carrying the same number of passengers in each trip as the first, it carried a total of 3*160 = <<3*160=480>>480 in all three round trips.\nIn total, the train carried 160+480 = <<160+480=640>>640 people over all its trips that day\n#### 640",
+    "selected": 0,
+    "confidence": 0.5097274556672038,
+    "candidate": "We are given:\n\n- On one trip, 100 passengers are carried from one station to the other.\n- On the return trip, 60 passengers are carried.\n- The train makes **three more round trips**, each taking the same number of people as the first trip.\n\n### Step 1: Determine the number of passengers per round trip\n- First trip: 100 passengers\n- Return trip: 60 passengers\n\nSo, **one round trip** transports **100 + 60 = 160 passengers**.\n\n### Step 2: Calculate total passengers transported over three round trips\n- Each round trip: 160 passengers\n- Three round trips: $ 3 \\times 160 = 480 $ passengers\n\n### Final Answer:\n$$\n\\boxed{480}\n$$"
+  },
+  {
+    "position": 469,
+    "question": "Lara is baking cookies using four baking trays. She places five rows of cookies on a baking tray where there are six cookies in one row. How many cookies is she baking?",
+    "reference": "Lara can bake 5 x 6 = <<5*6=30>>30 cookies in one tray.\nSo, Lara is baking a total of 30 x 4 = <<30*4=120>>120 cookies.\n#### 120",
+    "selected": 2,
+    "confidence": 0.5737925108869593,
+    "candidate": "We are told:\n\n- There are **four baking trays**.\n- There are **five rows** of cookies.\n- Each row has **six cookies**.\n\nWe need to find the total number of cookies.\n\n### Step-by-step calculation:\n\n- Each row has 6 cookies.\n- There are 5 rows.\n- So, total cookies = $ 5 \\text{ rows} \\times 6 \\text{ cookies per row} = 30 $.\n\n### Final answer:\n\n$$\n\\boxed{30}\n$$"
+  },
+  {
+    "position": 473,
+    "question": "Jenna is making a costume for her role in Oliver Twist. She needs to make an overskirt and two petticoats. Each skirt uses a rectangle of material that measures 12 feet by 4 feet. She also needs to make a bodice that uses 2 square feet of material for the shirt and 5 square feet of fabric for each of the sleeves. If the material she uses costs $3 per square foot, how much does she spend on the material in total?",
+    "reference": "First find the amount of material needed for one skirt: 12 feet * 4 feet = <<12*4=48>>48 square feet\nThen multiply that number by the number of skirts to find the total material used on the skirts: 48 square feet/skirt * 3 skirts = 144 square feet\nThen find the total amount of material she uses for the sleeves: 5 square feet/sleeve * 2 sleeves = <<5*2=10>>10 square feet\nThen add the amount of material she uses for each part of the dress to find the total amount of material: 10 square feet + 144 square feet + 2 square feet = <<10+144+2=156>>156 square feet\nThen multiply the total amount of material by the cost per square foot to find the total cost: 156 square feet * $3/square foot = $<<156*3=468>>468\n#### 468",
+    "selected": 1,
+    "confidence": 0.4729370676903672,
+    "candidate": "We need to calculate the total cost of the material Jenna uses for her costume.\n\n### Step 1: Cost of the bodice\n- **Shirt**: $2 \\, \\text{square feet}$\n- **Sleeves**: $5 \\, \\text{square feet} \\times 2 = 10 \\, \\text{square feet}$\n- **Total bodice cost**:  \n  $2 + 10 = 12 \\, \\text{square feet}$\n\n### Step 2: Cost of the overskirt and two petticoats\n- Each skirt uses **12 feet \u00d7 4 feet = 48 square feet**.\n- She is making **1 overskirt + 2 petticoats** = 3 skirts.\n- Total material for this part:  \n  $3 \\times 48 = 144 \\, \\text{square feet}$\n\n### Step 3: Cost of the material\n- Each square foot costs **$3**.\n- Total cost:  \n  $144 \\times 3 = 432$\n\n### Final Answer:\n$$\n\\boxed{432}\n$$"
+  },
+  {
+    "position": 522,
+    "question": "After trick-or-treating, Brent dumped his candy on the table.  He had received 5 Kit-Kat bars, three times that amount in Hershey kisses, 8 boxes of Nerds,  and 11 lollipops.  He also had 10 Baby Ruths and half that amount in Reese Peanut butter cups.  After giving his little sister 5 lollipops, how many pieces of candy did Brent have left?",
+    "reference": "He had 5 Kit-Kats and had 3 times that amount in Kisses so he had 5*3 = <<5*3=15>>15 Hershey kisses\nHe had 10 Baby Ruths and half that amount in Reese Peanut butter cups so he had 10/2 = <<10/2=5>>5 Reese Peanut Butter cups\nHe had 11 lollipops and gave 5 to his sister so he now had 11-5 = <<11-5=6>>6 lollipops\nWhen you add up all of the candy, he had 5 Kit-Kats, 15 Hershey kisses, 10 Baby Ruths, 5 Reese cups, 8 Nerds and 6 lollipops so 5+15+10+5+8+6 = <<5+15+10+5+8+6=49>>49 pieces of candy\n#### 49",
+    "selected": 2,
+    "confidence": 0.4974183364424564,
+    "candidate": "Let's break down the candy Brent had and then subtract the 5 lollipops he gave to his sister.\n\n- **Kit-Kats**: 5  \n- **Hershey kisses**: 3 \u00d7 5 = 15  \n- **Nerds**: 8  \n- **Lollipops**: 11  \n- **Baby Ruths**: 10  \n- **Reese Peanut butter cups**: 10 \u00d7 0.5 = 5\n\nNow, add all the candies together:\n\n$$\n5 + 15 + 8 + 11 + 10 + 5 = 63\n$$\n\nAfter giving his sister 5 lollipops, the total candies left are:\n\n$$\n63 - 5 = \\boxed{58}\n$$\n\n#### <numeric answer> = 58"
+  },
+  {
+    "position": 550,
+    "question": "It takes a butterfly egg 120 days to become a butterfly. If each butterfly spends 3 times as much time as a larva as in a cocoon, how long does each butterfly spend in a cocoon?",
+    "reference": "Let c be the amount of time the butterfly spends in a cocoon and l be the amount of time it spends as a larva. We know that l = 3c and l + c = 120.\nSubstituting the first equation into the second equation, we get 3c + c = 120.\nCombining like terms, we get 4c = 120.\nDividing both sides by 4, we get c = 30.\n#### 30",
+    "selected": 1,
+    "confidence": 0.6854872219821299,
+    "candidate": "We are told:\n\n- A butterfly egg takes **120 days** to become a butterfly.\n- Each butterfly spends **3 times as much time** as a larva as in a cocoon.\n\nLet\u2019s define:\n\n- $ x $ = time spent in a **cocoon** (in days)\n- $ y $ = time spent in a **larva** (in days)\n\nWe are told:\n\n- $ x = 3y $\n\nWe also know that:\n\n- A butterfly egg takes **120 days** to become a butterfly.\n\nSo, the total time a butterfly spends is:\n\n$$\n120 = x + y\n$$\n\nSubstitute $ x = 3y $:\n\n$$\n120 = 3y + y = 4y\n$$\n\n$$\ny = \\frac{120}{4} = 30\n$$\n\n$$\nx = 3y = 3 \\times 30 = 90\n$$\n\n### \u2705 Final Answer:\n$$\n\\boxed{90}\n$$"
+  },
+  {
+    "position": 586,
+    "question": "On a particular day, Rose's teacher read the register and realized there were twice as many girls as boys present on that day. The class has 250 students, and all the 140 girls were present. If all the absent students were boys, how many boys were absent that day?",
+    "reference": "If there were twice as many girls as boys present that day, then the number of boys is 140 girls / 2 girls/boy = <<140/2=70>>70 boys.\nThe total number of students present that day is 140 girls + 70 boys = <<140+70=210>>210 students.\nIf the class has 250 students, then the number of boys absent is 250 students - 210 students = <<250-210=40>>40 boys.\n#### 40",
+    "selected": 0,
+    "confidence": 0.8013364918238843,
+    "candidate": "We are given:\n\n- Total number of students = 250  \n- Number of girls present = 140  \n- The number of girls is **twice** the number of boys present.\n\nLet the number of boys present be $ x $. Then the number of girls present is $ 2x $.\n\nWe are told there are **140 girls present**, so:\n\n$$\n2x = 140 \\Rightarrow x = 70\n$$\n\nSo, the number of boys present is **70**.\n\nSince all the **absent students** are boys, and the total number of students is 250, the number of absent boys is:\n\n$$\n250 - 70 = \\boxed{180}\n$$\n\n### Final Answer: **180**"
+  },
+  {
+    "position": 613,
+    "question": "Issac has to buy pens and pencils for the upcoming school year. Issac buys 108 writing utensils total. He buys 12 more than 5 times the number of pencils than pens. How many pens did Issac buy?",
+    "reference": "Let x be the number of pens bought\nHe bought 12+5x pencils\nx+(12+5x)=108\n6x+12=108\n6x=96\nx=<<16=16>>16 pens\n#### 16",
+    "selected": 1,
+    "confidence": 0.8633017684423806,
+    "candidate": "Let $ p $ be the number of pens and $ c $ be the number of pencils.  \nWe are told:  \n- Total writing utensils: $ p + c = 108 $  \n- He buys 12 more than 5 times the number of pencils than pens:  \n  $ 5c + 12 = p $\n\nWe now solve the system of equations:\n\n1. $ p + c = 108 $  \n2. $ p = 5c + 12 $\n\nSubstitute equation 2 into equation 1:  \n$ 5c + 12 + c = 108 $  \n$ 6c + 12 = 108 $  \n$ 6c = 96 $  \n$ c = 16 $\n\nNow find $ p $:  \n$ p = 5(16) + 12 = 80 + 12 = 92 $\n\n### Final Answer:\n#### $ \\boxed{92} $"
+  },
+  {
+    "position": 626,
+    "question": "Tara has a shoebox that is 4 inches tall and 6 inches wide. She puts a square block inside that is 4 inches per side. How many square inches of the box are left uncovered?",
+    "reference": "The shoebox is 24 square inches because 4 x 6 = <<4*6=24>>24\nThe block is 16 square inches because 4 x 4 = <<4*4=16>>16\nThere are 8 square inches uncovered because 24 - 16 = <<24-16=8>>8\n#### 8",
+    "selected": 0,
+    "confidence": 0.5662957799612335,
+    "candidate": "We are given:\n\n- The shoebox has dimensions: **4 in \u00d7 6 in \u00d7 4 in**.\n- A square block is placed inside: **4 in \u00d7 4 in \u00d7 4 in**.\n\n---\n\n### Step 1: Find the volume of the shoebox\n\n$$\n\\text{Volume of shoebox} = 4 \\times 6 \\times 4 = 96 \\text{ in}^3\n$$\n\n---\n\n### Step 2: Find the volume of the block\n\n$$\n\\text{Volume of block} = 4 \\times 4 \\times 4 = 64 \\text{ in}^3\n$$\n\n---\n\n### Step 3: Find the remaining volume\n\n$$\n\\text{Remaining volume} = 96 - 64 = 32 \\text{ in}^3\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{32}\n$$"
+  },
+  {
+    "position": 633,
+    "question": "James goes out to eat.  He orders a steak and egg meal for $16.  He is with his friend, who orders chicken fried steak for $14.  His friend pays for half the bill and James pays the tip along with his half of the bill. They tip 20%.  How much did James pay?",
+    "reference": "The meals cost 16+14=$<<16+14=30>>30\nSo each paid 30/2=$<<30/2=15>>15\nJames left a tip of 30*.2=$<<30*.2=6>>6\nSo James paid 15+6=$<<15+6=21>>21\n#### 21",
+    "selected": 0,
+    "confidence": 0.6474201787830894,
+    "candidate": "We are told:\n\n- James orders a steak and egg meal for **$16**.\n- His friend orders a chicken fried steak for **$14**.\n- His friend pays for half the bill.\n- James pays the **tip** (20% of the total bill) **and** his **half of the bill**.\n\n### Step 1: Total bill\n$$\n16 + 14 = 30 \\text{ dollars}\n$$\n\n### Step 2: Friend pays half the bill\n$$\n\\frac{30}{2} = 15 \\text{ dollars}\n$$\n\n### Step 3: James pays the tip and his half of the bill\n\n- The total tip is 20% of the **total bill**:\n  $$\n  0.20 \\times 30 = 6 \\text{ dollars}\n  $$\n\n- James pays his **half** of the bill:\n  $$\n  \\frac{16}{2} = 8 \\text{ dollars}\n  $$\n\n### Step 4: Total amount James pays\n$$\n6 + 8 = 14 \\text{ dollars}\n$$\n\n### Final Answer:\n$$\n\\boxed{14}\n$$"
+  },
+  {
+    "position": 655,
+    "question": "John decides to start collecting art.  He pays the same price for his first 3 pieces of art and the total price came to $45,000.  The next piece of art was 50% more expensive than those.  How much did all the art cost?",
+    "reference": "The first 3 pieces each cost 45000/3=$<<45000/3=15000>>15,000\nSo the next piece was 15,000*.5=$<<15000*.5=7500>>7,500 more expensive\nThat means it cost 15,000+7,500=$<<15000+7500=22500>>22,500\nThat means in total he spent 45,000+22,500=$67,500\n#### 67,500",
+    "selected": 2,
+    "confidence": 0.5012888618196523,
+    "candidate": "We are told:\n\n- John buys **3 pieces** of art, each costing the same price, for a total of **$45,000**.\n- The **next piece** is **50% more expensive** than the previous ones.\n\n### Step 1: Let the price of each of the first 3 pieces be $ x $.\n\nThen, the total price for the first 3 pieces is:\n\n$$\n3x = 45,000\n$$\n\nSolving for $ x $:\n\n$$\nx = \\frac{45,000}{3} = 15,000\n$$\n\nSo, each of the first 3 pieces costs **$15,000**.\n\n### Step 2: The next piece is 50% more expensive.\n\nThat means the next piece costs:\n\n$$\n15,000 \\times 1.5 = 22,500\n$$\n\n### Step 3: Total cost for all 4 pieces:\n\n$$\n15,000 + 22,500 = 37,500\n$$\n\n### Final Answer:\n\n$$\n\\boxed{37500}\n$$"
+  },
+  {
+    "position": 661,
+    "question": "After negotiating for the price of a phone, Karsyn bought a phone at 20% of the initial price. If the phone's initial price was $600, calculate how much she paid after negotiating.",
+    "reference": "If the initial price was $600, after negotiating the price, Karsyn paid 20/100*$600 = $<<20/100*600=120>>120 less.\nThe price at which she bought the phone is $600-$120 = $<<600-120=480>>480\n#### 480",
+    "selected": 0,
+    "confidence": 0.8031613485586387,
+    "candidate": "We are told that Karsyn bought a phone at **20% of the initial price**, which was **$600**.\n\n1. Calculate 20% of $600:\n   $$\n   0.20 \\times 600 = 120\n   $$\n\n2. Add this amount to the original price to find the total amount paid:\n   $$\n   600 + 120 = 720\n   $$\n\n### Final Answer:\n$$\n\\boxed{720}\n$$"
+  },
+  {
+    "position": 675,
+    "question": "A group of 30 tourists sets out on a walking tour of the rainforest. Two tourists are eaten by anacondas, then half the remaining tourists try to pet poisonous dart frogs and get poisoned. If only 1/7 of the poisoned tourists recovered, how many tourists are left at the end of the tour?",
+    "reference": "First, subtract the two tourists the anacondas got from the initial 30 tourists: 30 - 2 = <<30-2=28>>28\nNext, divide 28 by two to find out how many tourists got poisoned: 28 / 2 = <<28/2=14>>14.\nNow figure out how many of the 14 poisoned tourists recovered: 14 / 7 = <<14/7=2>>2.\nThe total number of surviving tourists is 14 + 2 = <<14+2=16>>16.\n#### 16",
+    "selected": 0,
+    "confidence": 0.4998891672698809,
+    "candidate": "We are given:\n\n- 30 tourists set out on the tour.\n- 2 tourists are eaten by anacondas.\n- Then, **half the remaining tourists** try to pet poisonous dart frogs and get poisoned.\n- **1/7 of the poisoned tourists** recover.\n\nWe are to find how many **tourists are left at the end**.\n\n---\n\n### Step 1: Start with the initial number of tourists.\n\n- 30 tourists.\n\n---\n\n### Step 2: Subtract the 2 tourists eaten by anacondas.\n\n- Remaining = $ 30 - 2 = 28 $\n\n---\n\n### Step 3: Half of the remaining tourists get poisoned.\n\n- Half of 28 = $ 28 \\div 2 = 14 $\n\nSo, **14 tourists are poisoned**.\n\n---\n\n### Step 4: 1/7 of the poisoned tourists recover.\n\n- $ 14 \\div 7 = 2 $ tourists recover.\n\n- Remaining poisoned = $ 14 - 2 = 12 $\n\n---\n\n### Step 5: Add the 2 recovered tourists to the remaining poisoned ones.\n\n- Total left = $ 12 + 2 = 14 $\n\n---\n\n### \u2705 Final Answer:\n\n$$\n\\boxed{14}\n$$"
+  },
+  {
+    "position": 677,
+    "question": "Janet buys 3 pounds of broccoli for $4 a pound, 3 oranges for $0.75 each, a cabbage for $3.75, a pound of bacon for $3, and two pounds of chicken for $3 a pound. What percentage of her grocery budget did she spend on meat, rounded to the nearest percent?",
+    "reference": "First find the total cost of the broccoli: 3 pounds * $4/pound = $<<3*4=12>>12\nThen find the total cost of the oranges: 3 oranges * $0.75/orange = $<<3*0.75=2.25>>2.25\nThen find the total cost of the vegetables: $12 + $2.25 + $3.75 = $<<12+2.25+3.75=18>>18\nThen find the total cost of the chicken: $3/pound * 2 pounds = $<<3*2=6>>6\nThen add the cost of the bacon to find the total cost of the meat: $6 + $3 = $<<6+3=9>>9\nThen add the cost of the meat and vegetables to find the total cost of the groceries: $9 + $18 = $<<9+18=27>>27\nThen divide the cost of the meat by the total grocery bill and multiply by 100% to express the answer as a percentage: $9 / $27 * 100% = 33.333%, which rounds down to 33%\n#### 33",
+    "selected": 2,
+    "confidence": 0.36245601317822795,
+    "candidate": "We are given the following items and their prices:\n\n- 3 pounds of broccoli at $4 per pound  \n- 3 oranges at $0.75 each  \n- A cabbage at $3.75  \n- A pound of bacon at $3  \n- 2 pounds of chicken at $3 per pound  \n\n### Step 1: Calculate total cost\n\n- Broccoli: $3 \\times 4 = 12  \n- Oranges: $3 \\times 0.75 = 2.25  \n- Cabbage: $3.75  \n- Bacon: $3  \n- Chicken: $3 \\times 2 = 6\n\n**Total cost = 12 + 2.25 + 3.75 + 3 + 6 = 27.00**\n\n### Step 2: Find the percentage of the budget spent on meat\n\nWe need to find the cost of **meat**, which is:\n\n- Bacon: $3\n\nSo, the meat cost is **$3**.\n\nNow calculate the percentage:\n\n$$\n\\text{Percentage of budget spent on meat} = \\left( \\frac{3}{27} \\right) \\times 100 = 11.11\\%\n$$\n\n### Final Answer:\n\n$$\n\\boxed{11}\n$$"
+  },
+  {
+    "position": 679,
+    "question": "Billy and Tiffany are having a contest to see how can run the most miles in a week. On Sunday, Monday, and Tuesday, Billy runs 1 mile each day and Tiffany runs 2 miles each day. On Wednesday, Thursday, and Friday, Billy runs 1 mile each day and Tiffany runs a 1/3 of a mile each day. On Saturday Tiffany assumes she's going to win and takes the day off. How many miles does Billy have to run on Saturday to tie Tiffany?",
+    "reference": "Billy has already run 6 miles because 1 plus 1 plus 1 plus 1 plus 1 plus plus 1 equals 6\nTiffany has already run 7 miles because 2 plus 2 plus 2 plus 1/3 plus 1/3 plus 1/3 equals <<2+2+2+1/3+1/3+1/3=7>>7\nBilly has to run 1 mile to tie Tiffany because 7 minus 6 equals 1.\n#### 1",
+    "selected": 3,
+    "confidence": 0.7138147810959444,
+    "candidate": "We are given the following information:\n\n- **Billy runs 1 mile per day on Sunday, Monday, and Tuesday.**\n- **Tiffany runs 2 miles per day on those three days.**\n- **Billy runs 1 mile per day on Wednesday, Thursday, and Friday.**\n- **Tiffany runs $ \\frac{1}{3} $ of a mile per day on those three days.**\n- **On Saturday, Tiffany takes the day off.**\n\nWe need to find how many miles Billy must run on Saturday to tie Tiffany.\n\n---\n\n### Step-by-step:\n\n- **Billy's total miles:**\n  - 3 days: 1 mile/day \u00d7 3 days = **3 miles**\n  - 3 days: 1 mile/day \u00d7 3 days = **3 miles**\n  - Total = 3 + 3 = **6 miles**\n\n- **Tiffany's total miles:**\n  - 3 days: 2 miles/day \u00d7 3 days = **6 miles**\n  - 3 days: $ \\frac{1}{3} $ mile/day \u00d7 3 days = **1 mile**\n  - Total = 6 + 1 = **7 miles**\n\nSo, **Billy needs to run 7 miles on Saturday to tie Tiffany**.\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{7}\n$$"
+  },
+  {
+    "position": 726,
+    "question": "The show Magic King was on the air for 10 seasons and 20 episodes per season for the first half of seasons and 25 for the second half of the show.  How many total episodes were there?",
+    "reference": "Half the number of shows is 10/2=<<10/2=5>>5 seasons\nSo the first 5 seasons contributed 5*20=<<5*20=100>>100 episodes\nThe second 5 seasons contributed 5*25=<<5*25=125>>125 episodes\nSo there were a total of 100+125=<<100+125=225>>225 episodes\n#### 225",
+    "selected": 1,
+    "confidence": 0.626535062702307,
+    "candidate": "The show had 10 seasons.  \n- First half: 20 episodes per season \u2192 $ 10 \\times 20 = 200 $ episodes.  \n- Second half: 25 episodes per season \u2192 $ 10 \\times 25 = 250 $ episodes.  \n\nTotal episodes = $ 200 + 250 = \\boxed{450} $."
+  },
+  {
+    "position": 728,
+    "question": "Hansel makes $30,000 a year and just received a 10% raise.  Gretel makes the same amount as Hansel but received a 15% raise.  How much more money will Gretel make compared to Hansel?",
+    "reference": "Hansel makes $30,000 and received a 10% raise so his raise is 30,000*.10 = $3,000.00\nHansel now makes 30,000+ 3,000 = $<<30000+3000=33000>>33,000 a year\nGretel makes $30,000 and received a 15% raise so her raise is 30,000*.15 = $4,500.00\nGretel now makes 30,000+4,500 = $<<30000+4500=34500>>34,500 a year\nIf Gretel makes $34,500 a year and Hansel makes $33,000 then Gretel makes 34,500-33,000 = $<<34500-33000=1500>>1,500 more a year than Hansel\n#### 1500",
+    "selected": 0,
+    "confidence": 0.6756885277465099,
+    "candidate": "Hansel makes $30,000 a year.  \nGretel makes the same as Hansel, so $30,000.  \n\nGretel receives a 15% raise, so she makes:  \n$$ 30,000 \\times 1.15 = 34,500 $$\n\nNow, to find how much more Gretel makes compared to Hansel:  \n$$ 34,500 - 30,000 = 4,500 $$\n\n#### <numeric answer> 4500"
+  },
+  {
+    "position": 733,
+    "question": "A plumber is trying to decide which of three different jobs he should take to make the most money.  The first job involves fixing three toilets and three sinks at an apartment complex.  The second involves two toilets and five sinks at a different apartment complex.  The third involves fixing one toilet, two showers and three sinks at a third apartment complex.  If the plumber charges $30 to fix a sink, $40 to fix a shower and $50 to fix a toilet, what is the most money the plumber can earn if he can only choose one of these three jobs?",
+    "reference": "If the plumber chooses the first job, he would earn 3*50 + 3*30 = $<<3*50+3*30=240>>240.\nIf he chooses the second, he'd earn 2*50 + 5*30 = $<<2*50+5*30=250>>250.\nIf he chooses the third, he'd earn 50 + 2*40 + 3*30 = $<<50+2*40+3*30=220>>220.\nTherefore, the most money he can earn from one of these jobs is $<<250=250>>250.\n#### 250",
+    "selected": 1,
+    "confidence": 0.8068174984758281,
+    "candidate": "We are given the following information:\n\n- **Job 1**: 3 toilets, 3 sinks  \n- **Job 2**: 2 toilets, 5 sinks  \n- **Job 3**: 1 toilet, 2 showers, 3 sinks  \n\nThe plumber charges:\n\n- $30 per sink  \n- $40 per shower  \n- $50 per toilet  \n\nWe are to find the **maximum** amount the plumber can earn by choosing **one** of the three jobs.\n\n### Step 1: Calculate the total earnings for each job\n\n#### **Job 1**:\n- 3 toilets \u00d7 $50 = $150  \n- 3 sinks \u00d7 $30 = $90  \n- **Total earnings**: $150 + $90 = **$240**\n\n#### **Job 2**:\n- 2 toilets \u00d7 $50 = $100  \n- 5 sinks \u00d7 $30 = $150  \n- **Total earnings**: $100 + $150 = **$250**\n\n#### **Job 3**:\n- 1 toilet \u00d7 $50 = $50  \n- 2 showers \u00d7 $40 = $80  \n- 3 sinks \u00d7 $30 = $90  \n- **Total earnings**: $50 + $80 + $90 = **$220**\n\n### Step 2: Compare the earnings\n\n- Job 1: $240  \n- Job 2: $250  \n- Job 3: $220\n\n### Step 3: Choose the job with the highest earnings\n\n**Job 2** gives the **most money**.\n\n### Final Answer:\n\n$$\n\\boxed{250}\n$$"
+  },
+  {
+    "position": 739,
+    "question": "A person puts $5600 in a bank for two years. Each year he earns interest of 7% of the original amount deposited. How much will this person have in the bank after two years?",
+    "reference": "The interest that this person will get equals $5600 * 7%/year * 2 years = $<<5600*7*.01*2=784>>784.\nAfter two years the amount found at the bank is $5600 + $784 = $<<5600+784=6384>>6384.\n#### 6384",
+    "selected": 3,
+    "confidence": 0.6383417136867436,
+    "candidate": "We are given:\n\n- Initial amount deposited: $5600  \n- Annual interest rate: 7%  \n- Time period: 2 years  \n\n### Step 1: First year  \nInterest earned = 7% of $5600 = $0.07 \u00d7 5600 = **$392**\n\nAfter one year, total amount = $5600 + $392 = **$6,000**\n\n### Step 2: Second year  \nInterest earned = 7% of $6000 = $0.07 \u00d7 6000 = **$420**\n\nAfter two years, total amount = $6000 + $420 = **$6,420**\n\n### Final Answer:  \n$$\n\\boxed{6420}\n$$"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "list_marginal_combined_0.1",
+  "members": [
+    {
+      "file": "list_marginal_combined_0.1.npz",
+      "mode": "combined",
+      "layers": 1
+    }
+  ],
+  "aggregation": {
+    "kind": "logsumexp",
+    "temperature": 0.5,
+    "count_penalty": 1.0
+  },
+  "selection_split": "validation",
+  "training_split": "train",
+  "development": "CPU ranking v2; no test IO"
+}
