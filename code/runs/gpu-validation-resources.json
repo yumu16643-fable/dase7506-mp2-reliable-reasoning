@@ -1,0 +1,13 @@
+{
+  "split": "validation",
+  "questions": 798,
+  "prediction_process_seconds": 1.9153078999952413,
+  "scoring_process_seconds": 0.1760301000031177,
+  "total_wall_seconds": 2.0913519999885466,
+  "threads": 4,
+  "processor": "Intel Core i7-13650HX",
+  "python": "3.12.7",
+  "numpy_only_inference": true,
+  "cuda_used_during_inference": false,
+  "measurement": "Fresh official prediction/scoring; startup/imports/hashes/loading/preprocessing included; OS disk cache not flushed. Not a reference Xeon measurement."
+}

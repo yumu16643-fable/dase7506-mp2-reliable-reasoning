@@ -1,0 +1,17 @@
+{
+  "name": "residual_context_marginal_2027",
+  "members": [
+    {
+      "file": "residual_context_marginal_2027.npz",
+      "architecture": "residual_context_marginal",
+      "seed": 2027,
+      "epochs": 11
+    }
+  ],
+  "selection": "training-only question-disjoint three-fold OOF accuracy",
+  "feature_clip": [
+    -5,
+    5
+  ],
+  "plan": "gpu-ranking-round-2026-10-31"
+}

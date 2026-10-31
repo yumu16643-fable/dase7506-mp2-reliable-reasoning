@@ -1,8 +1,14 @@
 # Selecting Reliable LLM Reasoning - DASE7506 MP2
 
-## Follow-up optimization experiment (this branch)
+## GPU experiment (this branch)
 
-This branch records a CPU-only ranking/pooling follow-up. Validation improves from 92.23% to 94.24%, but the newly frozen method's single final test evaluation is **80.08565310492506% (374/467)**. It is a negative result, not a claimed leaderboard improvement. The existing submission [#340](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/340) and `main` branch remain unchanged.
+Actual training uses a single RTX 4060 Laptop GPU with PyTorch 2.6.0+cu118. Four architectures, two seeds and three-fold question-disjoint training-only cross-validation select a residual contextual verifier. OOF accuracy is 91.23% (original: 90.81%); validation is 92.61% (original: 92.23%). These are small development gains, not a demonstrated test improvement. The pre-recorded promotion gate is not met, so no public test evaluation or new official submission is made in this round.
+
+See [the ten-page complete report](reports/gpu-report.pdf) and [the Chinese GPU summary](GPU_OPTIMIZATION_ZH.md). CPU/NumPy checkpoint reproduction from `code/` is `python evaluate_gpu.py` (validation only); the matching assets are in `runs/model_bundle_gpu/`. CUDA retraining uses `requirements-gpu.txt` and `python train_gpu.py`. The fixed experiment plan is `gpu_plan.json`; complete search, environment, hardware, export checks and hashes are recorded under `runs/`. Main and official submission #340 remain unchanged.
+
+## Earlier CPU ranking experiment
+
+The earlier CPU-only ranking/pooling follow-up improves validation from 92.23% to 94.24%, but its frozen method's single final test evaluation is **80.08565310492506% (374/467)**. It is a negative result, not a claimed leaderboard improvement. The existing submission [#340](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/340) and `main` branch remain unchanged.
 
 Read [the eight-page complete report](reports/optimization-report.pdf) and [the Chinese optimization summary](OPTIMIZATION_ZH.md). Reproduce the follow-up from `code/` with `python evaluate_v2.py --split test`; the matching assets are `runs/model_bundle_v2/`. Training/search are in `train_v2.py`, and the training-only three-fold diagnostic is in `cross_validate_v2.py`. All new development uses train/validation only; final test scoring occurs after the recorded freeze.
 

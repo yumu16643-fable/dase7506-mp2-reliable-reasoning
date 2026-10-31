@@ -1,0 +1,32 @@
+{
+  "frozen_at_utc": "2026-10-31T07:06:26.134676+00:00",
+  "model": {
+    "name": "residual_context_marginal_2027",
+    "architecture": "residual_context_marginal",
+    "seeds": [
+      2027
+    ],
+    "oof_accuracy": 0.9123028391167193
+  },
+  "promotion_gate_passed": false,
+  "public_test_accessed": false,
+  "inference_asset_bytes": 344253,
+  "sha256": {
+    "submission_gpu.py": "8f970dbfebfcb0494e7f4faee476fe99493f1ae796f630608def648375710e60",
+    "features.py": "791d61265cc46737b93931581a669325e0b54feb6ebdd3ad08df0ebb2ac359a1",
+    "gpu_model.py": "b41f66a2a59fa1fbdce05a356abee71023a544867eea389dded38681fdd0edc6",
+    "train_gpu.py": "caadd0b319a1bdc70d7ed81e905d464d5a7a86013ef7637665d4a62f133a45f5",
+    "gpu_plan.json": "5709fa4826c0928fffa75aa98c16d4527395a9010d8b2ae5d39974a3aa4ab590",
+    "runs/model_bundle_gpu/baseline.npz": "9f2df351880b8f4b5d062659499c66178c195b12804e20ba51574a463621a899",
+    "runs/model_bundle_gpu/config.json": "fa19306cfce952ae29781687245d98ff04f21128a5d4e2729416087459602736",
+    "runs/model_bundle_gpu/residual_context_marginal_2027.npz": "f8aa7f4f76060c669666c16ae76ad2e45dfa3ac4b95ab4636591d137d7f922b6"
+  },
+  "checks": [
+    "actual CUDA execution",
+    "automatic-differentiation finite-difference check",
+    "GPU/NumPy validation choices match",
+    "renamed IDs",
+    "different bank size",
+    "candidate score permutation equivariance"
+  ]
+}

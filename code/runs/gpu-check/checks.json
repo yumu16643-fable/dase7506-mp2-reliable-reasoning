@@ -1,0 +1,30 @@
+{
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.6.0+cu118",
+  "cuda_runtime": "11.8",
+  "synthetic_export_tests": [
+    {
+      "architecture": "shared_bce",
+      "max_cuda_numpy_difference": 5.960464477539063e-08,
+      "permutation_scores_passed": true
+    },
+    {
+      "architecture": "shared_marginal",
+      "max_cuda_numpy_difference": 5.960464477539063e-08,
+      "permutation_scores_passed": true
+    },
+    {
+      "architecture": "context_marginal",
+      "max_cuda_numpy_difference": 2.9802322387695312e-08,
+      "permutation_scores_passed": true
+    },
+    {
+      "architecture": "residual_context_marginal",
+      "max_cuda_numpy_difference": 0.0,
+      "permutation_scores_passed": true
+    }
+  ],
+  "marginal_loss_gradient_check": "passed",
+  "test_bank_accessed": false
+}

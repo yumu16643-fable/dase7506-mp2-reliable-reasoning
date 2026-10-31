@@ -1,0 +1,382 @@
+{
+  "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "memory_total_bytes": 8585216000,
+  "torch": "2.6.0+cu118",
+  "cuda_runtime": "11.8",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "plan_sha256": "5709fa4826c0928fffa75aa98c16d4527395a9010d8b2ae5d39974a3aa4ab590",
+  "test_accessed": false,
+  "plan": {
+    "protocol": "gpu-ranking-round-2026-10-31",
+    "training_split": "train",
+    "model_selection": "three-fold question-disjoint cross-validation inside train; no test IO",
+    "outer_cv_seed": 2026,
+    "inner_holdout_fraction": 0.15,
+    "architectures": [
+      "shared_bce",
+      "shared_marginal",
+      "context_marginal",
+      "residual_context_marginal"
+    ],
+    "seeds": [
+      2026,
+      2027
+    ],
+    "width": 64,
+    "second_width": 32,
+    "dropout": 0.3,
+    "weight_decay": 0.1,
+    "learning_rate": 0.001,
+    "batch_questions": 128,
+    "max_epochs": 100,
+    "early_stopping_patience": 12,
+    "candidate_configurations": "8 individual seed models plus 4 two-seed mean-logit ensembles",
+    "selection_ties": "prefer fewer inference members, then fixed plan order",
+    "feature_clipping": [
+      -5,
+      5
+    ],
+    "gpu": "single local NVIDIA GeForce RTX 4060 Laptop GPU",
+    "inference": "CPU NumPy only; <=16 MiB required assets and <=30 s complete prediction plus scoring",
+    "promotion_gate": "OOF accuracy >= original OOF accuracy + 0.005 and validation accuracy >= 736/798; no changes based on test outcomes",
+    "test_policy": "No public test access during search. Only a gate-passing frozen method is eligible for a final score. No test-based configuration selection."
+  },
+  "baseline_oof_accuracy": 0.9080967402733964,
+  "candidates": [
+    {
+      "name": "shared_bce_2026",
+      "architecture": "shared_bce",
+      "seeds": [
+        2026
+      ],
+      "oof_accuracy": 0.8912723449001052
+    },
+    {
+      "name": "shared_bce_2027",
+      "architecture": "shared_bce",
+      "seeds": [
+        2027
+      ],
+      "oof_accuracy": 0.8914826498422713
+    },
+    {
+      "name": "shared_bce_ensemble",
+      "architecture": "shared_bce",
+      "seeds": [
+        2026,
+        2027
+      ],
+      "oof_accuracy": 0.8912723449001052
+    },
+    {
+      "name": "shared_marginal_2026",
+      "architecture": "shared_marginal",
+      "seeds": [
+        2026
+      ],
+      "oof_accuracy": 0.9087276550998948
+    },
+    {
+      "name": "shared_marginal_2027",
+      "architecture": "shared_marginal",
+      "seeds": [
+        2027
+      ],
+      "oof_accuracy": 0.9110410094637224
+    },
+    {
+      "name": "shared_marginal_ensemble",
+      "architecture": "shared_marginal",
+      "seeds": [
+        2026,
+        2027
+      ],
+      "oof_accuracy": 0.9101997896950579
+    },
+    {
+      "name": "context_marginal_2026",
+      "architecture": "context_marginal",
+      "seeds": [
+        2026
+      ],
+      "oof_accuracy": 0.9055730809674027
+    },
+    {
+      "name": "context_marginal_2027",
+      "architecture": "context_marginal",
+      "seeds": [
+        2027
+      ],
+      "oof_accuracy": 0.9055730809674027
+    },
+    {
+      "name": "context_marginal_ensemble",
+      "architecture": "context_marginal",
+      "seeds": [
+        2026,
+        2027
+      ],
+      "oof_accuracy": 0.9053627760252366
+    },
+    {
+      "name": "residual_context_marginal_2026",
+      "architecture": "residual_context_marginal",
+      "seeds": [
+        2026
+      ],
+      "oof_accuracy": 0.910410094637224
+    },
+    {
+      "name": "residual_context_marginal_2027",
+      "architecture": "residual_context_marginal",
+      "seeds": [
+        2027
+      ],
+      "oof_accuracy": 0.9123028391167193
+    },
+    {
+      "name": "residual_context_marginal_ensemble",
+      "architecture": "residual_context_marginal",
+      "seeds": [
+        2026,
+        2027
+      ],
+      "oof_accuracy": 0.9123028391167193
+    }
+  ],
+  "selected": {
+    "name": "residual_context_marginal_2027",
+    "architecture": "residual_context_marginal",
+    "seeds": [
+      2027
+    ],
+    "oof_accuracy": 0.9123028391167193
+  },
+  "validation_correct": 739,
+  "validation_n": 798,
+  "validation_accuracy": 0.9260651629072681,
+  "promotion_gate_passed": false,
+  "fold_records": [
+    {
+      "fold": 0,
+      "name": "shared_bce_2026",
+      "architecture": "shared_bce",
+      "seed": 2026,
+      "selected_epochs": 8,
+      "outer_accuracy": 0.8870662460567823,
+      "seconds": 3.955664400011301
+    },
+    {
+      "fold": 0,
+      "name": "shared_bce_2027",
+      "architecture": "shared_bce",
+      "seed": 2027,
+      "selected_epochs": 7,
+      "outer_accuracy": 0.8876971608832808,
+      "seconds": 1.3811096000135876
+    },
+    {
+      "fold": 0,
+      "name": "shared_marginal_2026",
+      "architecture": "shared_marginal",
+      "seed": 2026,
+      "selected_epochs": 13,
+      "outer_accuracy": 0.898422712933754,
+      "seconds": 1.2548374999896623
+    },
+    {
+      "fold": 0,
+      "name": "shared_marginal_2027",
+      "architecture": "shared_marginal",
+      "seed": 2027,
+      "selected_epochs": 19,
+      "outer_accuracy": 0.9072555205047319,
+      "seconds": 1.4249243999947794
+    },
+    {
+      "fold": 0,
+      "name": "context_marginal_2026",
+      "architecture": "context_marginal",
+      "seed": 2026,
+      "selected_epochs": 7,
+      "outer_accuracy": 0.9041009463722397,
+      "seconds": 0.8171887999924365
+    },
+    {
+      "fold": 0,
+      "name": "context_marginal_2027",
+      "architecture": "context_marginal",
+      "seed": 2027,
+      "selected_epochs": 10,
+      "outer_accuracy": 0.9047318611987382,
+      "seconds": 0.9680332999851089
+    },
+    {
+      "fold": 0,
+      "name": "residual_context_marginal_2026",
+      "architecture": "residual_context_marginal",
+      "seed": 2026,
+      "selected_epochs": 10,
+      "outer_accuracy": 0.910410094637224,
+      "seconds": 0.9875195999920834
+    },
+    {
+      "fold": 0,
+      "name": "residual_context_marginal_2027",
+      "architecture": "residual_context_marginal",
+      "seed": 2027,
+      "selected_epochs": 9,
+      "outer_accuracy": 0.910410094637224,
+      "seconds": 0.9226858000038192
+    },
+    {
+      "fold": 1,
+      "name": "shared_bce_2026",
+      "architecture": "shared_bce",
+      "seed": 2026,
+      "selected_epochs": 5,
+      "outer_accuracy": 0.8845425867507887,
+      "seconds": 1.1786810000194237
+    },
+    {
+      "fold": 1,
+      "name": "shared_bce_2027",
+      "architecture": "shared_bce",
+      "seed": 2027,
+      "selected_epochs": 7,
+      "outer_accuracy": 0.8839116719242902,
+      "seconds": 1.3727691000094637
+    },
+    {
+      "fold": 1,
+      "name": "shared_marginal_2026",
+      "architecture": "shared_marginal",
+      "seed": 2026,
+      "selected_epochs": 27,
+      "outer_accuracy": 0.9097791798107255,
+      "seconds": 1.707348700001603
+    },
+    {
+      "fold": 1,
+      "name": "shared_marginal_2027",
+      "architecture": "shared_marginal",
+      "seed": 2027,
+      "selected_epochs": 16,
+      "outer_accuracy": 0.905993690851735,
+      "seconds": 1.0793546000204515
+    },
+    {
+      "fold": 1,
+      "name": "context_marginal_2026",
+      "architecture": "context_marginal",
+      "seed": 2026,
+      "selected_epochs": 9,
+      "outer_accuracy": 0.8996845425867508,
+      "seconds": 0.8764495000068564
+    },
+    {
+      "fold": 1,
+      "name": "context_marginal_2027",
+      "architecture": "context_marginal",
+      "seed": 2027,
+      "selected_epochs": 14,
+      "outer_accuracy": 0.8996845425867508,
+      "seconds": 1.1801640999910887
+    },
+    {
+      "fold": 1,
+      "name": "residual_context_marginal_2026",
+      "architecture": "residual_context_marginal",
+      "seed": 2026,
+      "selected_epochs": 13,
+      "outer_accuracy": 0.9123028391167193,
+      "seconds": 1.112658999976702
+    },
+    {
+      "fold": 1,
+      "name": "residual_context_marginal_2027",
+      "architecture": "residual_context_marginal",
+      "seed": 2027,
+      "selected_epochs": 20,
+      "outer_accuracy": 0.9141955835962146,
+      "seconds": 1.4995342000038363
+    },
+    {
+      "fold": 2,
+      "name": "shared_bce_2026",
+      "architecture": "shared_bce",
+      "seed": 2026,
+      "selected_epochs": 7,
+      "outer_accuracy": 0.9022082018927445,
+      "seconds": 1.2475323999824468
+    },
+    {
+      "fold": 2,
+      "name": "shared_bce_2027",
+      "architecture": "shared_bce",
+      "seed": 2027,
+      "selected_epochs": 9,
+      "outer_accuracy": 0.9028391167192429,
+      "seconds": 1.3980412000091746
+    },
+    {
+      "fold": 2,
+      "name": "shared_marginal_2026",
+      "architecture": "shared_marginal",
+      "seed": 2026,
+      "selected_epochs": 14,
+      "outer_accuracy": 0.917981072555205,
+      "seconds": 1.0789561999845318
+    },
+    {
+      "fold": 2,
+      "name": "shared_marginal_2027",
+      "architecture": "shared_marginal",
+      "seed": 2027,
+      "selected_epochs": 14,
+      "outer_accuracy": 0.9198738170347003,
+      "seconds": 1.0732631999999285
+    },
+    {
+      "fold": 2,
+      "name": "context_marginal_2026",
+      "architecture": "context_marginal",
+      "seed": 2026,
+      "selected_epochs": 11,
+      "outer_accuracy": 0.9129337539432176,
+      "seconds": 1.0702630000014324
+    },
+    {
+      "fold": 2,
+      "name": "context_marginal_2027",
+      "architecture": "context_marginal",
+      "seed": 2027,
+      "selected_epochs": 9,
+      "outer_accuracy": 0.9123028391167193,
+      "seconds": 0.9377166999911424
+    },
+    {
+      "fold": 2,
+      "name": "residual_context_marginal_2026",
+      "architecture": "residual_context_marginal",
+      "seed": 2026,
+      "selected_epochs": 13,
+      "outer_accuracy": 0.9085173501577287,
+      "seconds": 1.1826903999899514
+    },
+    {
+      "fold": 2,
+      "name": "residual_context_marginal_2027",
+      "architecture": "residual_context_marginal",
+      "seed": 2027,
+      "selected_epochs": 11,
+      "outer_accuracy": 0.9123028391167193,
+      "seconds": 1.0685822000086773
+    }
+  ],
+  "final_refit_seconds": 0.5627379000070505,
+  "total_seconds": 62.93888739999966,
+  "peak_gpu_memory_bytes": 271554560,
+  "inference_asset_bytes": 344253,
+  "numpy_export_choices_match_cuda": true
+}

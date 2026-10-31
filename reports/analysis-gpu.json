@@ -1,0 +1,18 @@
+{
+  "train_oof_n": 4755,
+  "original_oof_correct": 4318,
+  "gpu_oof_correct": 4338,
+  "oof_fixes": 127,
+  "oof_breaks": 107,
+  "oof_paired_bootstrap95_gain": [
+    -0.002103049421661409,
+    0.010515247108307046
+  ],
+  "validation_n": 798,
+  "original_validation_correct": 736,
+  "gpu_validation_correct": 739,
+  "validation_fixes": 15,
+  "validation_breaks": 12,
+  "public_test_evaluated_this_round": false,
+  "uncertainty_note": "Descriptive after configuration selection; folds overlap in fitting data; not corrected for model search."
+}
