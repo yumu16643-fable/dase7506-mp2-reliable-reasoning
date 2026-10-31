@@ -5,15 +5,15 @@ DASE7506 MP2 | Follow-up experiment | 31 October 2026
 
 This experiment asks whether inexpensive, mechanically checkable arithmetic evidence improves candidate selection beyond the supplied representations and trace statistics. It adds eighteen deterministic features describing numerical equation consistency, then chooses a compact linear ranker using training-only question-level cross-validation. No new language-model generation, external dataset or pretrained weights are used.
 
-[['Development result', 'Original submitted verifier', 'Arithmetic candidate'], ['Training OOF, seed 2026', '90.81% (4318/4755)', '91.65% (4358/4755)'], ['Reshuffled train OOF, seed 2037', '90.75%', '91.84%'], ['Validation', '92.23% (736/798)', '94.24% (752/798)'], ['Public test score', '81.37% (380/467)', 'Not evaluated this round']]
+[['Evaluation', 'Original submitted verifier', 'Frozen arithmetic verifier'], ['Training OOF, seed 2026', '90.81% (4318/4755)', '91.65% (4358/4755)'], ['Reshuffled train OOF, seed 2037', '90.75%', '91.84%'], ['Validation', '92.23% (736/798)', '94.24% (752/798)'], ['Official public test score', '81.37% (380/467)', '82.44% (385/467)']]
 
-<b>The result supports an improvement on development evaluations, not a new leaderboard claim.</b> The original official submission #340 is left unchanged. The arithmetic candidate is separately frozen and reproducible; no public test inputs or references are opened during this round.
+<b>The frozen verifier scores 385/467 = 82.44111349% on the official public test bank.</b> This is five more correct choices than the original submitted model (+1.07 percentage points). One final scoring run is performed after explicit authorization and source/asset hash verification. No model parameters, features or settings are changed after that score; the original score record is preserved.
 
 Task, data and protocol
 
-Each question has four supplied candidate solutions. Select one candidate index; the unchanged official scorer checks its final numeric answer, not the validity of every reasoning step. The bank has 4,755 training, 798 validation and 467 test questions. All groups contain a correct final answer, and several candidates can be correct. Only training references fit model parameters and normalization. Validation is inspected after the current configuration is selected, without a validation parameter search.
+Each question has four supplied candidate solutions. Select one candidate index; the unchanged official scorer checks its final numeric answer, not the validity of every reasoning step. The bank has 4,755 training, 798 validation and 467 test questions. All groups contain a correct final answer, and several candidates can be correct. Only training references fit parameters and normalization. Validation is inspected after the current configuration is selected. Test inputs/references are not opened during development; the later final evaluation only scores the fixed checkpoint.
 
-The original baseline is the training-standardized C=0.01 logistic verifier over embeddings, centered embeddings and 46 trace/answer statistics. Previous CPU and GPU rounds are retained as historical evidence. Their observed results and repeated use of the course development bank mean this report should not characterize the present estimates as a fresh independent study.
+The original baseline is the training-standardized C=0.01 logistic verifier over embeddings, centered embeddings and 46 statistics. Earlier frozen public-test scores are 81.37% for the original model and 80.09% for the CPU ranking follow-up; the GPU round is not test-scored. All records are retained. The test bank was observed in earlier project rounds, so the current result is not a pristine independent generalization study. An instructor audit remains necessary for stronger conclusions.
 
 Main evidence
 
@@ -64,7 +64,7 @@ The arithmetic winner is marginal_combined_0.1. It fixes 166 original OOF errors
 
 The matched feature ablation holds the loss, regularization, numeric parser and folds constant; adding arithmetic features gains twenty questions (+0.42 points). The complete method versus the original verifier also changes its training objective, so the full +0.84-point gain cannot be attributed only to arithmetic features. The reshuffled diagnostic evaluates the already selected method and does not trigger another configuration search. It reuses the same questions, so it is not an external audit.
 
-Only after training-OOF selection and full training is the selected configuration evaluated on validation: 752/798 = 94.23558897%. This matches the highest validation score seen in an earlier CPU round, but the methods and selection protocols differ. The earlier method scored worse on its final test; therefore equal validation accuracy is not evidence of equal or better test accuracy. No new test score is claimed.
+Only after training-OOF selection and full training is the selected configuration evaluated on validation: 752/798 = 94.23558897%. A later, separately authorized final evaluation of this same frozen model gives 385/467 = 82.44111349%. The improvement is modest and descriptive of the course bank; no statistical significance or generalization guarantee is claimed. The recorded freeze, original development-only plan and subsequent final-scoring authorization remain separate provenance records.
 
 
 ---
@@ -80,7 +80,7 @@ Post-selection validation diagnostics illustrate the limits. For the stock-profi
 
 Resources and integrity checks
 
-All fitting in this round uses CPU, with four numerical-library threads. The corrected search takes 131.98 s locally; the reshuffled diagnostic takes 56.73 s and matched ablation 19.26 s. Partial debug timing is retained in its separate log. The final required assets total 14,323 bytes. Fresh official CPU validation prediction plus scoring takes 1.896 s on an Intel Core i7-13650HX, including startup/imports, hashing, loading and preprocessing. No reference-Xeon measurement or new complete-test timing is claimed.
+All fitting uses CPU with four numerical-library threads. The corrected search takes 131.98 s locally; reshuffled diagnostic 56.73 s and matched ablation 19.26 s. Partial debug timing is retained separately. Required inference assets total 14,323 bytes. Fresh official CPU prediction plus scoring takes 1.896 s on validation and 1.410 s on the complete test bank, on an Intel Core i7-13650HX. These include startup/imports, hashing, loading and preprocessing. The reference Xeon is not measured.
 
 Behavioral numeric/LaTex/rounding/unit/unsafe-expression checks pass. Float32 export preserves every validation choice. Renamed IDs, a seven-question bank and candidate score permutations pass. The official data, numeric parser and scorer remain unchanged. Inference receives new bank/array inputs and never opens references, stored predictions or answer lookup tables. Frozen source/asset hashes are recorded in runs/freeze-arithmetic.json.
 
@@ -90,9 +90,10 @@ Exact commands from code/
 python -m pip install -r requirements.txt
 python download_data.py
 python check_arithmetic.py
-python evaluate_arithmetic.py
+python evaluate_arithmetic.py           # validation
+python evaluate_arithmetic_final.py     # official test reproduction
 
-# Optional complete training and diagnostic reproduction
+# Optional training and diagnostics (no test IO)
 python -m pip install -r requirements-training.txt
 python train_arithmetic.py
 python check_robustness_arithmetic.py
@@ -101,4 +102,4 @@ python ablate_arithmetic.py
 
 The inference assets are runs/model_bundle_arithmetic. Training-only selection and full records are in train_arithmetic.py and runs/arithmetic-search/. Dependencies remain NumPy 1.26.4, SciPy 1.13.1, scikit-learn 1.5.1, joblib 1.4.2 and threadpoolctl 3.5.0. Seeds are recorded in the plan and diagnostics. Checkpoint evaluation requires NumPy only.
 
-AI/reuse disclosure: Codex substantially assisted with design, implementation, debugging, experiments, analysis and report writing. Official course tools are reused unchanged. Questions/references derive from GSM8K (retained MIT license); supplied candidates/embeddings derive from Qwen3-0.6B with revision in the manifest. No additional data or pretrained weights are used. Course source: github.com/xudongwu-0/DASE7506-MP2, upstream bb801f4f2e7629d270df765ab12c333b2dc616bb. The current candidate is an experiment and does not replace the existing official submission.
+AI/reuse disclosure: Codex substantially assisted with design, implementation, debugging, experiments, analysis and report writing. Official course tools are reused unchanged. Questions/references derive from GSM8K (retained MIT license); candidates/embeddings derive from Qwen3-0.6B with revision in the manifest. No additional data or pretrained weights are used. Course source: github.com/xudongwu-0/DASE7506-MP2, upstream bb801f4f2e7629d270df765ab12c333b2dc616bb. The matching frozen source/checkpoint and official JSON are published together for reproduction.

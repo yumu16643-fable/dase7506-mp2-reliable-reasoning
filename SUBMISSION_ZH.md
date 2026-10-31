@@ -1,5 +1,7 @@
 # 提交说明
 
+本文件为首次提交的历史说明。当前优化版的最终测试成绩为 82.44111349036403%，方法为 submission_arithmetic.py；请以根目录 README 和 FINAL_ARITHMETIC_ZH.md 为准。
+
 本目录包含完整代码、实验和报告。正式提交是否完成，以课程网站或实际 GitHub 提交 issue 为准。
 
 ## 表单填写内容

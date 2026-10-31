@@ -1,32 +1,12 @@
-# Selecting Reliable LLM Reasoning - DASE7506 MP2
+# DASE7506 MP2 - Frozen arithmetic verifier
 
-## Arithmetic consistency experiment (this branch)
+**Current final test accuracy: 82.44111349036403% (385/467).** Validation: 94.23558897243107% (752/798). This is +5 test questions / +1.07066381 percentage points over the original 81.37044967880085% submission.
 
-The current follow-up adds eighteen bounded numeric-equation features. Training-only question-level three-fold accuracy improves from 90.81% to 91.65%; a reshuffled diagnostic improves from 90.75% to 91.84%. The selected method scores 94.24% (752/798) on validation. A matched loss/regularization ablation gives 91.23% without the arithmetic features, versus 91.65% with them. No public test inputs/references are opened in this round, so these are development results, not a new leaderboard score. Main and official submission #340 remain unchanged.
+The submitted method is **`code/submission_arithmetic.py`**, with checkpoint **`code/runs/model_bundle_arithmetic/`**. The report for this version is **[reports/arithmetic-report.pdf](reports/arithmetic-report.pdf)** (four pages). Other method files and reports are historical experiments; do not substitute their checkpoints or default commands when reproducing the current score.
 
-See [the focused four-page report](reports/arithmetic-report.pdf) and [the Chinese result summary](ARITHMETIC_OPTIMIZATION_ZH.md). Frozen checkpoint evaluation from `code/` is `python evaluate_arithmetic.py` (validation only), with assets in `runs/model_bundle_arithmetic/` totaling 14,323 bytes. CPU training uses the existing `requirements-training.txt` and `python train_arithmetic.py`; the reshuffled diagnostic and matched ablation are separate scripts. All sources/assets, logs, coverage statistics and tests are recorded and reproducible. Inference uses NumPy only and supports new banks through the official interface.
+## Checkpoint reproduction, no training required
 
-## Earlier GPU experiment
-
-Actual training uses a single RTX 4060 Laptop GPU with PyTorch 2.6.0+cu118. Four architectures, two seeds and three-fold question-disjoint training-only cross-validation select a residual contextual verifier. OOF accuracy is 91.23% (original: 90.81%); validation is 92.61% (original: 92.23%). These are small development gains, not a demonstrated test improvement. The pre-recorded promotion gate is not met, so no public test evaluation or new official submission is made in this round.
-
-See [the ten-page complete report](reports/gpu-report.pdf) and [the Chinese GPU summary](GPU_OPTIMIZATION_ZH.md). CPU/NumPy checkpoint reproduction from `code/` is `python evaluate_gpu.py` (validation only); the matching assets are in `runs/model_bundle_gpu/`. CUDA retraining uses `requirements-gpu.txt` and `python train_gpu.py`. The fixed experiment plan is `gpu_plan.json`; complete search, environment, hardware, export checks and hashes are recorded under `runs/`. Main and official submission #340 remain unchanged.
-
-## Earlier CPU ranking experiment
-
-The earlier CPU-only ranking/pooling follow-up improves validation from 92.23% to 94.24%, but its frozen method's single final test evaluation is **80.08565310492506% (374/467)**. It is a negative result, not a claimed leaderboard improvement. The existing submission [#340](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/340) and `main` branch remain unchanged.
-
-Read [the eight-page complete report](reports/optimization-report.pdf) and [the Chinese optimization summary](OPTIMIZATION_ZH.md). Reproduce the follow-up from `code/` with `python evaluate_v2.py --split test`; the matching assets are `runs/model_bundle_v2/`. Training/search are in `train_v2.py`, and the training-only three-fold diagnostic is in `cross_validate_v2.py`. All new development uses train/validation only; final test scoring occurs after the recorded freeze.
-
-The following sections describe the original submitted baseline and its original reproduction commands.
-
-Frozen model: `lr_context_0.01`. Official test accuracy: **81.37044967880085% (380/467)**. Validation: **92.23057644110276% (736/798)**. This is a completed local artifact; it does not claim that a leaderboard issue has been submitted.
-
-The method concatenates 1,024 supplied embedding features, their centered counterparts and 46 reference-free text/answer statistics. A training-standardized L2 logistic model selects the largest score among parseable candidates. No question IDs, lookup tables, cached choices, external weights, generation or reference IO are used during inference. `reports/report.pdf` is the six-page report.
-
-## Reproduce the checkpoint result without retraining
-
-Use Python 3.12. Open a terminal in this repository. Windows PowerShell:
+Use Python 3.12. Windows PowerShell from the repository root:
 
 ```powershell
 python -m venv .venv
@@ -34,88 +14,84 @@ python -m venv .venv
 cd code
 ..\.venv\Scripts\python.exe download_data.py
 ..\.venv\Scripts\python.exe check_data.py
-..\.venv\Scripts\python.exe evaluate.py --split validation
-..\.venv\Scripts\python.exe evaluate.py --split test
+..\.venv\Scripts\python.exe check_arithmetic.py
+..\.venv\Scripts\python.exe evaluate_arithmetic.py
+..\.venv\Scripts\python.exe evaluate_arithmetic_final.py
 ```
 
-On Linux/macOS:
+On Linux/macOS, use `.venv/bin/python` from the root or `../.venv/bin/python` after entering `code/`. The wrappers start fresh official prediction and independent scoring processes and set `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, `MKL_NUM_THREADS` and `NUMEXPR_NUM_THREADS` to 4 before either starts. The final wrapper verifies the original frozen source/asset hashes; it does not retrain or select a model.
 
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r code/requirements.txt
-cd code
-../.venv/bin/python download_data.py
-../.venv/bin/python check_data.py
-../.venv/bin/python evaluate.py --split validation
-../.venv/bin/python evaluate.py --split test
-```
-
-The self-contained package already includes the data; `download_data.py` verifies and skips existing valid files. The small publication package excludes the supplied data and fetches it from the immutable upstream commit `bb801f4f2e7629d270df765ab12c333b2dc616bb`. Download/install are setup steps; prediction and scoring run offline after setup. The `.gitattributes` file prevents Windows Git newline conversion from corrupting official data hashes.
-
-`evaluate.py` starts the unmodified official prediction and independent scoring programs as two fresh processes and externally measures their combined wall time. It sets `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, `MKL_NUM_THREADS` and `NUMEXPR_NUM_THREADS` to 4 before either process starts. Results are in `code/runs/test-score.json` and `test-resources.json`.
-
-Direct official commands, from `code/` (PowerShell):
+Equivalent direct official test commands, from `code/` (PowerShell):
 
 ```powershell
 $env:OMP_NUM_THREADS='4'
 $env:OPENBLAS_NUM_THREADS='4'
 $env:MKL_NUM_THREADS='4'
 $env:NUMEXPR_NUM_THREADS='4'
-python predict.py --method submission.py --checkpoint runs/model_bundle --split test --output runs/test-predictions.json
-python score_predictions.py --split test --predictions runs/test-predictions.json --output runs/test-score.json
+python predict.py --method submission_arithmetic.py --checkpoint runs/model_bundle_arithmetic --split test --output runs/arithmetic-test-predictions.json
+python score_predictions.py --split test --predictions runs/arithmetic-test-predictions.json --output runs/arithmetic-test-score.json
 ```
 
-For an instructor audit bank, use the same frozen method with the official runner:
+`download_data.py` obtains the official bank from upstream commit `bb801f4f2e7629d270df765ab12c333b2dc616bb` and verifies its manifest hashes. Download/install are setup only. Prediction and scoring run offline afterward. `.gitattributes` prevents newline conversion from invalidating data/source hashes. An instructor audit bank is accepted without retraining or ID assumptions:
 
 ```bash
-python predict.py --method submission.py --checkpoint runs/model_bundle --split audit --data-dir /path/to/audit_inputs --output runs/audit-predictions.json
+python predict.py --method submission_arithmetic.py --checkpoint runs/model_bundle_arithmetic --split audit --data-dir /path/to/audit_inputs --output runs/audit-predictions.json
 ```
 
-Apply the four thread environment settings above to the direct test and audit commands.
+Apply the same four thread settings to direct audit evaluation. Inference uses the supplied bank/arrays and never opens reference files, saved choices or answer lookups.
+
+## Method and model selection
+
+The input consists of 1,024 supplied embedding dimensions, 46 original trace/answer statistics, and 18 deterministic arithmetic-consistency features (1,088 total). A bounded AST interpreter checks supported numerical equations, fractions, percentages and LaTex; unknown/unit-bearing expressions can be skipped. It never calls Python `eval` or executes expressions as code. The features are evidence, not hard vetoes or a full mathematical proof.
+
+A standardized linear model optimizes marginal listwise loss, rewarding probability on any correct valid candidate, with L2=0.1. Normalization and weights fit training only. The configuration is selected by training-only three-fold question-disjoint OOF accuracy, seed 2026; the original baseline wins ties. A diagnostic reshuffle uses seed 2037 without reselection. Validation is inspected after the selected configuration is fixed, not used for a new parameter search.
+
+| Evaluation | Original model | Arithmetic verifier |
+|---|---:|---:|
+| Train OOF, seed 2026 | 90.81% (4318/4755) | 91.65% (4358/4755) |
+| Reshuffled OOF, seed 2037 | 90.75% | 91.84% |
+| Validation | 92.23% (736/798) | 94.24% (752/798) |
+| Official public test | 81.37% (380/467) | 82.44% (385/467) |
+
+Matched objective/regularization ablation: 91.23% OOF without arithmetic versus 91.65% with it. Development does not load test inputs/references. The original freeze is recorded before the separately authorized final test evaluation; no model/features/settings are changed after its score. Earlier project test results (including the CPU follow-up's 80.09%) are preserved. Repeated project use of the development/public banks limits independent-generalization conclusions; the instructor audit remains important.
+
+## Resources and checks
+
+- Required inference assets: **14,323 bytes total**, uncompressed NPZ and configuration, excluding supplied data and ordinary source.
+- Local complete test prediction plus scoring: **1.4095039 s**, two fresh processes, four threads, startup/imports/hashing/loading/preprocessing included.
+- Hardware: Intel Core i7-13650HX; Python 3.12.7; CPU training and inference for this version. No GPU required.
+- Reference Xeon runtime is not measured. The OS disk cache is not flushed for local timing.
+- Corrected full training search: 131.98 s; reshuffled diagnostic: 56.73 s; matched ablation: 19.26 s. Preliminary parser-debug run was aborted before validation; its partial log is retained.
+- Numeric/LaTex/rounding/unit/unsafe-expression behavioral checks, float32 export choices, renamed IDs, different bank size and candidate permutation checks pass.
+
+Key files:
+
+- `code/runs/model_bundle_arithmetic/`: all required inference assets.
+- `code/runs/freeze-arithmetic.json`: original model/source hashes and development freeze.
+- `code/runs/arithmetic-final-evaluation.json`: final-scoring scope and hash verification after development.
+- `code/runs/arithmetic-test-score.json`: unchanged official scorer output, 385/467.
+- `code/runs/arithmetic-test-resources.json`: full fresh-process measurement.
+- `code/runs/arithmetic-search/`: model comparison, reshuffle, ablation and parser audit.
+- `reports/arithmetic-report.pdf`: current four-page report; other reports are historical.
+- `SHA256SUMS.txt`: all published package-file hashes.
 
 ## Training reproduction
 
-From `code/`:
+From `code/`, in a separate environment/directory so the frozen bundle is not overwritten:
 
 ```bash
 python -m pip install -r requirements-training.txt
-python train.py --output runs/retrained
+python train_arithmetic.py
+python check_robustness_arithmetic.py
+python ablate_arithmetic.py
 ```
 
-This fits training-only scaling/weights, runs the full validation search and saves a new validation-selected configuration. It never loads test inputs or references. Do not replace the submitted frozen bundle with a new checkpoint after examining test performance. Seeds are 2026 and 2027. Training may have small numeric differences across BLAS/platforms; checkpoint evaluation avoids retraining.
+These scripts never open test inputs or references. Exact dependencies: NumPy 1.26.4, SciPy 1.13.1, scikit-learn 1.5.1, joblib 1.4.2 and threadpoolctl 3.5.0. Inference requires NumPy only. Learned scaling/statistics are included in the checkpoint, so evaluation needs no retraining. Small cross-platform training differences are possible; checkpoint scoring avoids retraining.
 
-The original training command was `python train.py --output runs/search`. `freeze.py` then copied the validation winner and hashed the matching source/assets before official test scoring. It should not be rerun just to reproduce the frozen result. The original freeze manifest is retained unchanged.
+## AI assistance and attribution
 
-## Artifacts and measurements
+OpenAI Codex provided substantive assistance with design, features, implementation, debugging, experiment execution, analysis and report writing, beyond autocomplete. The submitter should understand the method and evidence. Official bank loading, numeric parsing, runner, data checker and independent scorer are reused unchanged. No extra pretrained weights, external datasets or cached-answer selection are used.
 
-- `code/submission.py`, `features.py`: NumPy-only inference and reference-free features.
-- `code/train.py`: complete search/training process, including worse configurations.
-- `code/runs/model_bundle/`: all required inference assets, **26,397 bytes total** (uncompressed NPZ plus JSON); 16 MiB allowed.
-- `code/runs/freeze.json`: matching source/asset hashes, timestamp, upstream version.
-- `code/runs/search/experiments.json`, `code/runs/training.log`: actual full development records; **71.97 s** total search locally.
-- `code/runs/test-score.json`: unchanged official scorer output, **380/467**.
-- `code/runs/test-resources.json`: **0.925 s** combined fresh-process prediction/scoring locally with four threads. No reference-Xeon measurement is claimed.
-- `code/verify_inference.py`: renamed IDs, different bank size, candidate permutations and integer output checks.
-- `code/analyze.py`: frozen validation error/confidence analysis; never changes the model.
-- `code/benchmark_ablations.py`: validation-only fresh-process cost comparison.
-- `reports/report.pdf`, `report.md`: six-page report and editable text.
-- `reports/validation_choices.csv`, `validation_errors.json`: detailed validation diagnostics.
-- `reports/ablation_resources.json`: measured resource comparison.
+Questions/references derive from GSM8K (retained MIT license and attribution in `DATA_LICENSE.txt`, `DATA_NOTICE.txt`, and downloaded data). Candidate traces/embeddings were supplied using Qwen3-0.6B; revision is recorded in the data manifest. Upstream course repository: https://github.com/xudongwu-0/DASE7506-MP2 .
 
-Local hardware/software: Intel Core i7-13650HX (14 cores, 20 logical processors), Windows 11, Python 3.12.7, NumPy 1.26.4, SciPy 1.13.1, scikit-learn 1.5.1, joblib 1.4.2, threadpoolctl 3.5.0. No GPU. Evaluation processes use at most four threads. The reference Xeon machine determines official runtime eligibility; local figures include startup/imports/loading but do not flush the OS disk cache.
-
-## Main findings and limitations
-
-Majority voting gives 86.22% validation accuracy; statistics-only and embedding-only LR each give 89.72%; combined LR gives 92.11%, and the submitted centered LR gives 92.23%. The last difference is only one question. MLPs/ensembles do not improve the validation score. With a linear scorer, group-centering terms cancel within each question; the extra block changes fitting/regularization rather than providing nonlinear comparison at inference.
-
-Easy consensus groups inflate validation accuracy: on the 355 validation questions with at least two distinct valid parsed answers, the frozen model gets 82.54%, versus majority's 69.01%. This is more comparable in difficulty to the test bank (81.37%). Confidence analysis is retrospective, uncalibrated and includes the same validation bank used for model selection. The method does not verify every arithmetic step or resolve all wording ambiguities. Full analysis is in the report.
-
-## AI/reuse disclosure
-
-OpenAI Codex provided substantive assistance with architecture/features, implementation, debugging, local experiment execution, analysis and report drafting. This is substantial assistance beyond autocomplete. The submitter should read and understand the code and evidence before submission.
-
-The official loader, numeric parser, prediction runner, scorer and data checker are reused unchanged. Data derives from GSM8K (MIT); the supplied `code/data/LICENSE.txt` and `NOTICE.txt` are retained. Candidate traces/representations were supplied using Qwen3-0.6B, with model revision in `data/manifest.json`. No extra pretrained weights, external datasets or other solution implementations are used. scikit-learn 1.5.1 supplies the training algorithms.
-
-## Submission
-
-The course requires public code/report and checkpoint/configuration links, then an actual GitHub issue created via the [MP2 submission website](https://xudongwu-0.github.io/courses/dase7506/mp2/). A local ZIP or prepared issue link is not a completed submission. Publish this repository, identify the matching commit, and link the `code/runs/model_bundle/` folder at that commit. See `SUBMISSION_ZH.md` for the concrete student ID, exact score and remaining steps.
+Historical development documentation is in `README_HISTORY.md` and the separate experiment summaries. Original submission #340 remains preserved; the final score update uses this version and its matching checkpoint links.

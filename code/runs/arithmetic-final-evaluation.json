@@ -1,0 +1,16 @@
+{
+  "authorized_final_evaluation_at_utc": "2026-10-31T12:10:54.808239+00:00",
+  "user_request": "Evaluate the frozen optimized model and assess whether the result can be updated/uploaded.",
+  "frozen_experiment_commit": "b72d44032aeebb410f16bebf59c38a71b2883ae3",
+  "frozen_model": {
+    "name": "marginal_combined_0.1",
+    "kind": "marginal",
+    "mode": "combined",
+    "arithmetic": true,
+    "parameter": 0.1,
+    "oof_accuracy": 0.9165089379600421
+  },
+  "hashes_verified": true,
+  "changes_to_model_for_final_scoring": false,
+  "policy": "One official test evaluation of this fixed checkpoint; no tuning or candidate comparison after this score."
+}

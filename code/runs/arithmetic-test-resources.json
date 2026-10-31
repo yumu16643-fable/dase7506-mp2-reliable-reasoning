@@ -1,0 +1,12 @@
+{
+  "split": "test",
+  "prediction_process_seconds": 1.1935116999957245,
+  "scoring_process_seconds": 0.21597839999594726,
+  "total_wall_seconds": 1.4095038999803364,
+  "threads": 4,
+  "python": "3.12.7",
+  "processor": "Intel Core i7-13650HX",
+  "gpu_used": false,
+  "frozen_source_and_assets_verified": true,
+  "measurement": "Two fresh official processes; startup/imports/hashes/data/asset loading/preprocessing/scoring included. OS disk cache not flushed; reference Xeon not measured."
+}

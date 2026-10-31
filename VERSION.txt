@@ -1,7 +1,11 @@
-Release: MP2-2026-10-31-frozen-lr-context-v1
+Release: MP2-2026-10-31-arithmetic-final
 Upstream: xudongwu-0/DASE7506-MP2
 Upstream commit: bb801f4f2e7629d270df765ab12c333b2dc616bb
-Frozen checkpoint: code/runs/model_bundle
-Model/source hashes: code/runs/freeze.json
-Official test score: 380/467 = 81.37044967880085 percent
+Frozen development commit: b72d44032aeebb410f16bebf59c38a71b2883ae3
+Current method: code/submission_arithmetic.py
+Frozen checkpoint: code/runs/model_bundle_arithmetic
+Model/source hashes: code/runs/freeze-arithmetic.json
+Final evaluation record: code/runs/arithmetic-final-evaluation.json
+Official test score: 385/467 = 82.44111349036403 percent
+Original preserved score: 380/467 = 81.37044967880085 percent
 All published file hashes: SHA256SUMS.txt
