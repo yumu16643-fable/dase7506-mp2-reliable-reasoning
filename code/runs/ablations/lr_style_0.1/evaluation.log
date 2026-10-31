@@ -1,0 +1,20 @@
+{"protocol": "dase7506-mp2-open-hard-verifier-v5", "split": "validation", "prediction_seconds": 0.8949560000037309}
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "split": "validation",
+  "correct": 634,
+  "n": 798,
+  "accuracy": 79.4486215538847,
+  "scoring_seconds": 0.03495840000687167
+}
+{
+  "split": "validation",
+  "prediction_process_seconds": 1.0386900000157766,
+  "scoring_process_seconds": 0.1766013999877032,
+  "total_wall_seconds": 1.2153194999846164,
+  "threads": 4,
+  "processor": "Intel Core i7-13650HX",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.7",
+  "measurement": "Two fresh processes; includes startup, imports, data hashes/loading, assets, preprocessing and scoring. OS disk cache not flushed."
+}

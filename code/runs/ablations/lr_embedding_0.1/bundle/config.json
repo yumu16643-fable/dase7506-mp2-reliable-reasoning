@@ -1,0 +1,9 @@
+{
+  "members": [
+    {
+      "file": "lr_embedding_0.1.npz",
+      "mode": "embedding",
+      "layers": 1
+    }
+  ]
+}

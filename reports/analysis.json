@@ -1,0 +1,119 @@
+{
+  "n": 798,
+  "correct": 736,
+  "accuracy": 0.9223057644110275,
+  "wilson95": [
+    0.901644146036591,
+    0.9389210212862401
+  ],
+  "majority_correct": 688,
+  "net_gain_questions": 48,
+  "paired_bootstrap95_gain": [
+    0.040100250626566414,
+    0.08145363408521303
+  ],
+  "model_fixes_majority": 60,
+  "model_breaks_majority": 12,
+  "different_answer_n": 82,
+  "accuracy_when_different": 0.7317073170731707,
+  "confidence_brier": 0.06332499148326944,
+  "confidence_ece_5_equal_width_bins": 0.037859484665375885,
+  "confidence_bins": [
+    {
+      "low": 0.0,
+      "high": 0.2,
+      "n": 4,
+      "accuracy": 1.0,
+      "confidence": 0.12644553184509277
+    },
+    {
+      "low": 0.2,
+      "high": 0.4,
+      "n": 17,
+      "accuracy": 0.5294117647058824,
+      "confidence": 0.32485508918762207
+    },
+    {
+      "low": 0.4,
+      "high": 0.6000000000000001,
+      "n": 14,
+      "accuracy": 0.6428571428571429,
+      "confidence": 0.5224213600158691
+    },
+    {
+      "low": 0.6000000000000001,
+      "high": 0.8,
+      "n": 42,
+      "accuracy": 0.6904761904761905,
+      "confidence": 0.7144691944122314
+    },
+    {
+      "low": 0.8,
+      "high": 1.0,
+      "n": 721,
+      "accuracy": 0.9500693481276006,
+      "confidence": 0.9785664081573486
+    }
+  ],
+  "coverage": [
+    {
+      "coverage": 0.2506265664160401,
+      "n": 200,
+      "accuracy": 1.0,
+      "minimum_confidence": 0.9985494017601013
+    },
+    {
+      "coverage": 0.5,
+      "n": 399,
+      "accuracy": 0.9974937343358395,
+      "minimum_confidence": 0.995254397392273
+    },
+    {
+      "coverage": 0.7506265664160401,
+      "n": 599,
+      "accuracy": 0.988313856427379,
+      "minimum_confidence": 0.9610029458999634
+    },
+    {
+      "coverage": 1.0,
+      "n": 798,
+      "accuracy": 0.9223057644110275,
+      "minimum_confidence": 0.054164886474609375
+    }
+  ],
+  "distinct_answer_groups": [
+    {
+      "distinct_answers": 1,
+      "n": 443,
+      "majority_accuracy": 1.0,
+      "model_accuracy": 1.0
+    },
+    {
+      "distinct_answers": 2,
+      "n": 227,
+      "majority_accuracy": 0.7709251101321586,
+      "model_accuracy": 0.8766519823788547
+    },
+    {
+      "distinct_answers": 3,
+      "n": 108,
+      "majority_accuracy": 0.6018518518518519,
+      "model_accuracy": 0.7314814814814815
+    },
+    {
+      "distinct_answers": 4,
+      "n": 20,
+      "majority_accuracy": 0.25,
+      "model_accuracy": 0.75
+    }
+  ],
+  "random_expected_accuracy": 0.7568922305764411,
+  "raw_candidate_zero_accuracy": 0.7819548872180451,
+  "informative_subset": {
+    "n": 355,
+    "model_accuracy": 0.8253521126760563,
+    "majority_accuracy": 0.6901408450704225,
+    "top_half_n": 178,
+    "top_half_accuracy": 0.9550561797752809
+  }
+}

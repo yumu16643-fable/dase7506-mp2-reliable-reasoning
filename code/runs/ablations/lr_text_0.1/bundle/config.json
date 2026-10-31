@@ -1,0 +1,9 @@
+{
+  "members": [
+    {
+      "file": "lr_text_0.1.npz",
+      "mode": "text",
+      "layers": 1
+    }
+  ]
+}

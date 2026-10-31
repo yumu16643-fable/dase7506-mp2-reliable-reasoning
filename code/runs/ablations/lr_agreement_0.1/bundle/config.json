@@ -1,0 +1,9 @@
+{
+  "members": [
+    {
+      "file": "lr_agreement_0.1.npz",
+      "mode": "agreement",
+      "layers": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "members": [
+    {
+      "file": "lr_combined_1.0.npz",
+      "mode": "combined",
+      "layers": 1
+    }
+  ]
+}

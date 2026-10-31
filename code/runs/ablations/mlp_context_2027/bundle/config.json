@@ -1,0 +1,9 @@
+{
+  "members": [
+    {
+      "file": "mlp_context_2027.npz",
+      "mode": "context",
+      "layers": 2
+    }
+  ]
+}

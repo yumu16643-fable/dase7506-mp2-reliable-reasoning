@@ -1,0 +1,15 @@
+{
+  "name": "lr_context_0.01",
+  "members": [
+    {
+      "mode": "context",
+      "file": "lr_context_0.01.npz",
+      "kind": "logistic",
+      "layers": 1
+    }
+  ],
+  "seed": 2026,
+  "selection_split": "validation",
+  "training_split": "train",
+  "mask_invalid": true
+}

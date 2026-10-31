@@ -1,0 +1,14 @@
+{
+  "members": [
+    {
+      "file": "mlp_combined_2026.npz",
+      "mode": "combined",
+      "layers": 2
+    },
+    {
+      "file": "mlp_combined_2027.npz",
+      "mode": "combined",
+      "layers": 2
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "frozen_at_utc": "2026-10-31T06:13:33.756104+00:00",
+  "selection": "Highest validation accuracy; ties follow fixed search order. No test inputs/labels used.",
+  "model": "lr_context_0.01",
+  "upstream_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+  "inference_asset_bytes": 26397,
+  "inference_asset_limit_bytes": 16777216,
+  "sha256": {
+    "features.py": "791d61265cc46737b93931581a669325e0b54feb6ebdd3ad08df0ebb2ac359a1",
+    "submission.py": "4eb67257c77866322a9622979c31146eeeca56c3e9336d2fff78dba908087044",
+    "train.py": "abb0b9574b41a9f09417e7efb30804be442d85c159c2b5b6b6c84cbc0b8a8ec8",
+    "runs/model_bundle/config.json": "29cbfa857383091d32865e7267dd214e4a0e9749f142b78997746841188613df",
+    "runs/model_bundle/lr_context_0.01.npz": "eb2805cfa9e7b6c3f9eea84975a7642749183c3fe5bf6f824da3450d54feb7c8"
+  }
+}

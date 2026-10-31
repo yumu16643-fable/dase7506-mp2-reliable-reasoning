@@ -1,0 +1,7 @@
+Release: MP2-2026-10-31-frozen-lr-context-v1
+Upstream: xudongwu-0/DASE7506-MP2
+Upstream commit: bb801f4f2e7629d270df765ab12c333b2dc616bb
+Frozen checkpoint: code/runs/model_bundle
+Model/source hashes: code/runs/freeze.json
+Official test score: 380/467 = 81.37044967880085 percent
+All published file hashes: SHA256SUMS.txt

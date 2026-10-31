@@ -1,0 +1,124 @@
+{
+  "n": 798,
+  "correct": 736,
+  "accuracy": 0.9223057644110275,
+  "wilson95": [
+    0.901644146036591,
+    0.9389210212862401
+  ],
+  "majority_correct": 688,
+  "net_gain_questions": 48,
+  "paired_bootstrap95_gain": [
+    0.040100250626566414,
+    0.08145363408521303
+  ],
+  "model_fixes_majority": 60,
+  "model_breaks_majority": 12,
+  "different_answer_n": 82,
+  "accuracy_when_different": 0.7317073170731707,
+  "confidence_brier": 0.06332499148326944,
+  "confidence_ece_5_equal_width_bins": 0.037859484665375885,
+  "confidence_bins": [
+    {
+      "low": 0.0,
+      "high": 0.2,
+      "n": 4,
+      "accuracy": 1.0,
+      "confidence": 0.12644553184509277
+    },
+    {
+      "low": 0.2,
+      "high": 0.4,
+      "n": 17,
+      "accuracy": 0.5294117647058824,
+      "confidence": 0.32485508918762207
+    },
+    {
+      "low": 0.4,
+      "high": 0.6000000000000001,
+      "n": 14,
+      "accuracy": 0.6428571428571429,
+      "confidence": 0.5224213600158691
+    },
+    {
+      "low": 0.6000000000000001,
+      "high": 0.8,
+      "n": 42,
+      "accuracy": 0.6904761904761905,
+      "confidence": 0.7144691944122314
+    },
+    {
+      "low": 0.8,
+      "high": 1.0,
+      "n": 721,
+      "accuracy": 0.9500693481276006,
+      "confidence": 0.9785664081573486
+    }
+  ],
+  "coverage": [
+    {
+      "coverage": 0.2506265664160401,
+      "n": 200,
+      "accuracy": 1.0,
+      "minimum_confidence": 0.9985494017601013
+    },
+    {
+      "coverage": 0.5,
+      "n": 399,
+      "accuracy": 0.9974937343358395,
+      "minimum_confidence": 0.995254397392273
+    },
+    {
+      "coverage": 0.7506265664160401,
+      "n": 599,
+      "accuracy": 0.988313856427379,
+      "minimum_confidence": 0.9610029458999634
+    },
+    {
+      "coverage": 1.0,
+      "n": 798,
+      "accuracy": 0.9223057644110275,
+      "minimum_confidence": 0.054164886474609375
+    }
+  ],
+  "distinct_answer_groups": [
+    {
+      "distinct_answers": 1,
+      "n": 443,
+      "majority_accuracy": 1.0,
+      "model_accuracy": 1.0
+    },
+    {
+      "distinct_answers": 2,
+      "n": 227,
+      "majority_accuracy": 0.7709251101321586,
+      "model_accuracy": 0.8766519823788547
+    },
+    {
+      "distinct_answers": 3,
+      "n": 108,
+      "majority_accuracy": 0.6018518518518519,
+      "model_accuracy": 0.7314814814814815
+    },
+    {
+      "distinct_answers": 4,
+      "n": 20,
+      "majority_accuracy": 0.25,
+      "model_accuracy": 0.75
+    }
+  ],
+  "random_expected_accuracy": 0.7568922305764411,
+  "raw_candidate_zero_accuracy": 0.7819548872180451,
+  "informative_subset": {
+    "n": 355,
+    "model_accuracy": 0.8253521126760563,
+    "majority_accuracy": 0.6901408450704225,
+    "top_half_n": 178,
+    "top_half_accuracy": 0.9550561797752809
+  }
+}
+FIRST ERRORS
+{"position": 32, "question": "Yun had 20 paperclips initially, but then lost 12. Marion has 1/4 more than what Yun currently has, plus 7. How many paperclips does Marion have?", "reference": "Yun has 20-12= <<20-12=8>>8 paperclips.\nMarion has 8/4 + 7 = <<8/4+7=9>>9 paperclips\n#### 9", "selected": 3, "candidate": "We are given the following:\n\n- Yun had **20 paperclips** initially.\n- Then lost **12**, so **Yun currently has** $ 20 - 12 = 8 $ paperclips.\n\n- Marion has **$ \\frac{1}{4} $ more than what Yun currently has, plus 7**.\n\nSo, we calculate:\n\n$$\n\\text{Marion's paperclips} = 8 + \\left( \\frac{1}{4} \\times 8 \\right) + 7\n$$\n\n$$\n= 8 + 2 + 7 = 17\n$$\n\n### Final Answer:\n$$\n\\boxed{17}\n$$"}
+{"position": 44, "question": "Three different 6th grade classes are combining for a square dancing unit.  If possible, the teachers would like each male student to partner with a female student for the unit.  The first class has 17 males and 13 females, while the second class has 14 males and 18 females, and the third class has 15 males and 17 females.  When the classes are combined, how many students will be unable to partner with a student of the opposite gender?", "reference": "Combining the three classes, there are 17 + 14 + 15 = <<17+14+15=46>>46 male students.\nSimilarly, there are 13 + 18 + 17 = <<13+18+17=48>>48 female students.\nThus, there are 48-46 = <<48-46=2>>2 students who cannot partner with a student of the opposite gender.\n#### 2", "selected": 0, "candidate": "We are told that each male student must partner with a female student, and we need to find how many students **cannot** partner with a student of the opposite gender when all three classes are combined.\n\n### Step 1: Total number of students\n\n- **Class 1:** 17 males + 13 females = 30 students  \n- **Class 2:** 14 males + 18 females = 32 students  \n- **Class 3:** 15 males + 17 females = 32 students  \n\n**Total students = 30 + 32 + 32 = 94 students**\n\n---\n\n### Step 2: Total number of possible pairings\n\n- Each student must pair with exactly one student of the opposite gender.  \n- So, the total number of possible pairings is the **minimum** of the total number of males and females, since we can't pair more than one person with each gender.\n\n- **Males: 17 + 14 + 15 = 46**  \n- **Females: 13 + 18 + 17 = 48**\n\nSo, the **maximum number of possible pairings** is **46** (the number of males).\n\n---\n\n### Step 3: Find how many students are unable to partner\n\nWe subtract the number of students who can partner from the total number of students:\n\n$$\n94 - 46 = 48\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{48}\n$$"}
+{"position": 48, "question": "Tom buys 20 shares of a stock that costs $3 each.  He sells 10 of those shares for $4 each.  The rest of the shares end up doubling in value.  How much profit does he make?", "reference": "He spends 3*20=$<<3*20=60>>60 on the shares.\nHe sells 10 for 10*4=$<<10*4=40>>40.\nHe sells the other 20-10=<<20-10=10>>10 for a higher valuation.\nTheir price was 3*2=$<<3*2=6>>6.\nSo he got 10*6=$<<10*6=60>>60 from those.\nSo in total, he got 60+40=$<<60+40=100>>100.\nSo his profit was 100-60=$<<100-60=40>>40.\n#### 40", "selected": 3, "candidate": "We are given:\n\n- Tom buys **20 shares** at **$3 each**, for a total of **$60**.\n- He sells **10 shares** at **$4 each**, for a total of **$40**.\n- The **remaining 10 shares** double in value, so they now cost **$3 × 2 = $6 each**.\n\nNow calculate the total profit:\n\n- Total profit = (Selling price - Cost price) × number of shares sold  \n  = ($40 - $30) × 10  \n  = $10 × 10  \n  = **$100**\n\n### Final Answer:\n#### $100."}
+{"position": 52, "question": "Erik's dog can run 24 miles per hour. It is chasing a rabbit that can run 15 miles per hour. The rabbit has a head start of .6 miles. How many minutes does it take for the dog to catch up to the rabbit?", "reference": "The dog runs .4 miles per minute because 24 / 60 = <<24/60=.4>>.4\nThe rabbit runs .25 miles per minute because 15 / 60 = <<15/60=.25>>.25\nWe know that .4(Number of Minutes) = .25(Number of Minutes) + .6\nTherefore .15(Number of Minutes) = .6\nTherefore (Number of Minutes) = 4\n#### 4", "selected": 0, "candidate": "We are given:\n\n- Erik's dog runs at **24 mph**.\n- The rabbit runs at **15 mph**.\n- The rabbit has a **head start of 0.6 miles**.\n\nWe want to find how long it takes for the dog to **catch up** to the rabbit.\n\n---\n\n### Step 1: Find the relative speed\n\nSince the dog is faster than the rabbit, the **relative speed** at which the dog is closing the gap is:\n\n$$\n24\\ \\text{mph} - 15\\ \\text{mph} = 9\\ \\text{mph}\n$$\n\n---\n\n### Step 2: Calculate the time to catch up\n\nThe head start is 0.6 miles, and the dog closes that gap at 9 mph. So:\n\n$$\n\\text{Time} = \\frac{\\text{Head Start}}{\\text{Relative Speed}} = \\frac{0.6}{9} = \\frac{2}{15} \\text{ hours}\n$$\n\n---\n\n### Step 3: Convert hours to minutes\n\n$$\n\\frac{2}{15} \\text{ hours} \\times 60\\ \\text{minutes/hour} = 8 \\text{ minutes}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{8} \\text{ minutes}\n$$"}

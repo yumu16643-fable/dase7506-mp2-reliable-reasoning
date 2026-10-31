@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": [
+    "seven-question unseen-size bank",
+    "renamed IDs do not change predictions",
+    "permuted candidate scores and selected answers",
+    "Python integer outputs",
+    "empty bank"
+  ]
+}

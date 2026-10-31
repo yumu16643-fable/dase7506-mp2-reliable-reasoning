@@ -1,0 +1,9 @@
+{
+  "members": [
+    {
+      "file": "lr_context_0.01.npz",
+      "mode": "context",
+      "layers": 1
+    }
+  ]
+}
