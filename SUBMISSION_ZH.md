@@ -1,6 +1,6 @@
 # 提交说明
 
-本地代码、实验和报告已完成；尚未发布 GitHub 仓库，尚未创建课程要求的提交 issue。
+本目录包含完整代码、实验和报告。正式提交是否完成，以课程网站或实际 GitHub 提交 issue 为准。
 
 ## 表单填写内容
 
@@ -31,6 +31,12 @@
 6. 模型仍会漏过算术错误、配对数量关系错误和题意歧义。报告包含实际失败案例。
 7. 已如实披露 Codex 对方案、代码、实验、分析和报告的实质性帮助。请在提交前阅读并理解。
 
-## 还缺少的信息
+## 发布目标
 
-用于发布的 GitHub 账户/仓库地址尚未确定。完成发布并实际创建课程提交 issue 后，才算正式提交。
+GitHub 账号：`yumu16643-fable`。
+
+仓库：https://github.com/yumu16643-fable/dase7506-mp2-reliable-reasoning
+
+检查点目录：https://github.com/yumu16643-fable/dase7506-mp2-reliable-reasoning/tree/main/code/runs/model_bundle
+
+正式表单使用匹配代码版本的固定 commit 链接，避免后续分支更新影响复现。完成发布并实际创建课程提交 issue 后，才算正式提交。
